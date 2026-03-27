@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: 'About IN7 Game | in7 game customer care | Is IN7 Real?',
     description: 'About IN7 Game. 24/7 customer care. IN7 game is REAL – 50L+ verified users. in7co.in official.',
     url: 'https://in7co.in/about-us',
-    images: [{ url: '/6c6ea394-9f54-4f32-9e79-dc698241cd44.jpeg', width: 1200, height: 630, alt: 'About IN7 Game' }],
+    images: [{ url: '/in7-game-banner.jpeg', width: 1200, height: 630, alt: 'About IN7 Game' }],
   },
 };
 
@@ -25,7 +25,7 @@ const organizationSchema = {
   url: 'https://in7co.in',
   logo: {
     '@type': 'ImageObject',
-    url: 'https://in7co.in/a10fd83d-99dc-459d-83cf-acd3bf3f70b7.jpg',
+    url: 'https://in7co.in/in7-game-logo.jpg',
     width: 512,
     height: 512,
   },
@@ -68,7 +68,7 @@ export default function AboutUs() {
         <div className="max-w-3xl mx-auto">
           <div className="flex justify-center mb-6">
             <Image
-              src="/a10fd83d-99dc-459d-83cf-acd3bf3f70b7.jpg"
+              src="/in7-game-logo.jpg"
               alt="IN7 Game Logo"
               width={100} height={100}
               className="rounded-2xl"

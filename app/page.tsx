@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'IN7 Game – Paise Jitne Wala Game | ₹777 APK 2026',
     description: "Download IN7 Game APK free. Best paise jitne wala game. Get ₹777 bonus. Instant UPI withdrawal. 50L+ players.",
     url: 'https://in7co.in',
-    images: [{ url: '/6c6ea394-9f54-4f32-9e79-dc698241cd44.jpeg', width: 1200, height: 630, alt: 'IN7 Game – Paise Jitne Wala Game APK' }],
+    images: [{ url: '/in7-game-banner.jpeg', width: 1200, height: 630, alt: 'IN7 Game – Paise Jitne Wala Game APK' }],
   },
 };
 
@@ -252,9 +252,9 @@ export default function Home() {
           <p className="text-white/50 text-center text-sm sm:text-base mb-8 sm:mb-10">See IN7 game online in action</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl sm:max-w-none mx-auto">
             {[
-              { src: '/WhatsApp-Image-2025-11-03-at-11.13.25-AM.jpeg', alt: 'IN7 Game App Screenshot - Game Interface' },
-              { src: '/WhatsApp-Image-2025-11-03-at-11.14.16-AM.jpeg', alt: 'IN7 Game Online - Earn Real Cash' },
-              { src: '/d383ff1d-74ba-4470-a7ae-fbe5dd44f551.jpeg', alt: 'IN7 APK - Withdrawal Process' },
+              { src: '/in7-game-app-screenshot.jpeg', alt: 'IN7 Game App Screenshot - Game Interface' },
+              { src: '/in7-game-spin-wheel.jpeg', alt: 'IN7 Game Online - Earn Real Cash' },
+              { src: '/in7-game-bonus-offer.jpeg', alt: 'IN7 APK - Withdrawal Process' },
             ].map(img => (
               <Image
                 key={img.src}
@@ -312,14 +312,14 @@ export default function Home() {
           "description": "IN7 Game – India's top paise jitne wala game. Download APK free. ₹777 bonus. UPI withdrawal games. 50L+ players.",
           "url": "https://in7co.in",
           "downloadUrl": "https://in7co.in/in7-game-download",
-          "screenshot": "https://in7co.in/6c6ea394-9f54-4f32-9e79-dc698241cd44.jpeg",
+          "screenshot": "https://in7co.in/in7-game-banner.jpeg",
         },
         {
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "IN7 Game",
           "url": "https://in7co.in",
-          "logo": "https://in7co.in/a10fd83d-99dc-459d-83cf-acd3bf3f70b7.jpg",
+          "logo": "https://in7co.in/in7-game-logo.jpg",
           "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "availableLanguage": ["English", "Hindi"] },
           "sameAs": ["https://in7co.in"],
         },

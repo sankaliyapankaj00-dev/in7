@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'IN7 Game Register – in7 login registration | ₹777',
     description: 'in7 login registration, in7 com login guide. Register on IN7 in 2 minutes. Get ₹777 free bonus instantly.',
     url: 'https://in7co.in/how-to-register',
-    images: [{ url: '/6c6ea394-9f54-4f32-9e79-dc698241cd44.jpeg', width: 1200, height: 630, alt: 'IN7 Game Login Registration Guide' }],
+    images: [{ url: '/in7-game-banner.jpeg', width: 1200, height: 630, alt: 'IN7 Game Login Registration Guide' }],
   },
 };
 

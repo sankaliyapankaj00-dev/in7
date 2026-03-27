@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: 'IN7 Game',
     locale: 'en_IN',
     type: 'website',
-    images: [{ url: '/6c6ea394-9f54-4f32-9e79-dc698241cd44.jpeg', width: 1200, height: 630, alt: 'IN7 Game' }],
+    images: [{ url: '/in7-game-banner.jpeg', width: 1200, height: 630, alt: 'IN7 Game' }],
   },
   twitter: { card: 'summary_large_image' },
 };
@@ -64,7 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             "url": "https://in7co.in",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://in7co.in/a10fd83d-99dc-459d-83cf-acd3bf3f70b7.jpg",
+              "url": "https://in7co.in/in7-game-logo.jpg",
               "width": 512,
               "height": 512,
             },

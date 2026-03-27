@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'IN7 Game Download APK Free 2026 – Official Android App',
     description: 'Download IN7 APK free. in7 com download, in7 apk download. ₹777 bonus. Instant UPI withdrawal. Official: in7co.in',
     url: 'https://in7co.in/in7-game-download',
-    images: [{ url: '/6c6ea394-9f54-4f32-9e79-dc698241cd44.jpeg', width: 1200, height: 630, alt: 'IN7 Game Download APK Free' }],
+    images: [{ url: '/in7-game-banner.jpeg', width: 1200, height: 630, alt: 'IN7 Game Download APK Free' }],
   },
 };
 
@@ -135,9 +135,9 @@ export default function In7GameDownload() {
           <h2 className="text-2xl font-black text-center mb-8">IN7 Game App <span style={{color:'#e63946'}}>Screenshots</span></h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { src: '/WhatsApp-Image-2025-11-03-at-11.13.25-AM.jpeg', alt: 'IN7 Game Download – App Interface' },
-              { src: '/WhatsApp-Image-2025-11-03-at-11.14.16-AM.jpeg', alt: 'IN7 APK – Game Lobby' },
-              { src: '/d383ff1d-74ba-4470-a7ae-fbe5dd44f551.jpeg', alt: 'IN7 Game – Withdrawal Screen' },
+              { src: '/in7-game-app-screenshot.jpeg', alt: 'IN7 Game Download – App Interface' },
+              { src: '/in7-game-spin-wheel.jpeg', alt: 'IN7 APK – Game Lobby' },
+              { src: '/in7-game-bonus-offer.jpeg', alt: 'IN7 Game – Withdrawal Screen' },
             ].map(img => (
               <Image key={img.src} src={img.src} alt={img.alt} width={300} height={400} className="rounded-xl w-full" style={{border:'1px solid rgba(230,57,70,0.2)'}} />
             ))}

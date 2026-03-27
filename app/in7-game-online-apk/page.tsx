@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'IN7 Game Online APK – Download Free 2026 | in7 game online',
     description: 'Download IN7 game online APK free. ₹777 bonus, instant UPI withdrawal. Official in7 online apk from in7co.in.',
     url: 'https://in7co.in/in7-game-online-apk',
-    images: [{ url: '/6c6ea394-9f54-4f32-9e79-dc698241cd44.jpeg', width: 1200, height: 630, alt: 'IN7 Game Online APK Download' }],
+    images: [{ url: '/in7-game-banner.jpeg', width: 1200, height: 630, alt: 'IN7 Game Online APK Download' }],
   },
 };
 
@@ -256,9 +256,9 @@ export default function In7GameOnlineApk() {
         <p className="text-white/50 text-center text-sm mb-8">The IN7 online game interface, inside the APK</p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl sm:max-w-none mx-auto">
           {[
-            { src: '/WhatsApp-Image-2025-11-03-at-11.13.25-AM.jpeg', alt: 'IN7 Game Online APK – Game Interface' },
-            { src: '/WhatsApp-Image-2025-11-03-at-11.14.16-AM.jpeg', alt: 'IN7 Online APK – Earn Real Cash' },
-            { src: '/d383ff1d-74ba-4470-a7ae-fbe5dd44f551.jpeg', alt: 'IN7 Game Online – Withdrawal Screen' },
+            { src: '/in7-game-app-screenshot.jpeg', alt: 'IN7 Game Online APK – Game Interface' },
+            { src: '/in7-game-spin-wheel.jpeg', alt: 'IN7 Online APK – Earn Real Cash' },
+            { src: '/in7-game-bonus-offer.jpeg', alt: 'IN7 Game Online – Withdrawal Screen' },
           ].map((img) => (
             <Image key={img.src} src={img.src} alt={img.alt} width={300} height={400} className="screenshot-img" style={{ border: '1px solid rgba(230,57,70,0.2)' }} />
           ))}

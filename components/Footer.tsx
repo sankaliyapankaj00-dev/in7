@@ -37,7 +37,7 @@ export default function Footer() {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
               <Image
-                src="/a10fd83d-99dc-459d-83cf-acd3bf3f70b7.jpg"
+                src="/in7-game-logo.jpg"
                 alt="IN7 Game"
                 width={34} height={34}
                 style={{ borderRadius: '8px', border: '1px solid rgba(230,57,70,0.25)' }}

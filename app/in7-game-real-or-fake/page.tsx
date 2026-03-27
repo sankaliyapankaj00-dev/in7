@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description:
       "Is IN7 Game real or fake? in7 game real or fake hai? Honest review – IN7 is India's legitimate platform. Customer care & safety facts.",
     url: 'https://in7co.in/in7-game-real-or-fake',
-    images: [{ url: '/6c6ea394-9f54-4f32-9e79-dc698241cd44.jpeg' }],
+    images: [{ url: '/in7-game-banner.jpeg' }],
   },
 };
 

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description:
       'IN7 Game login guide. in7 com login, in7 login registration, in7 com game login step by step. New user? Download IN7 APK, register & get ₹777 bonus instantly.',
     url: 'https://in7co.in/in7-game-login',
-    images: [{ url: '/6c6ea394-9f54-4f32-9e79-dc698241cd44.jpeg' }],
+    images: [{ url: '/in7-game-banner.jpeg' }],
   },
 };
 

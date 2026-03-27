@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description:
       'Best paise jitne wala game – IN7 Game APK download free. Game khel ke paise kaise kamaye? Earn real cash, UPI withdrawal games free download. ₹777 bonus!',
     url: 'https://in7co.in/paise-kamane-wala-game',
-    images: [{ url: '/6c6ea394-9f54-4f32-9e79-dc698241cd44.jpeg' }],
+    images: [{ url: '/in7-game-banner.jpeg' }],
   },
 };
 
