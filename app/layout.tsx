@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     images: [{ url: '/in7-game-banner.jpeg', width: 1200, height: 630, alt: 'IN7 Game' }],
   },
   twitter: { card: 'summary_large_image' },
+  verification: { google: 'H0_1-1ApyMPxCVQQICx51FXmozHXG5YjnmUI3p7mFkY' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
