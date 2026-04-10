@@ -52,11 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             "alternateName": ["in 7", "in7 apps", "ln7", "aaiae", "i am 7 game", "in7 com game", "paise jitne wala game"],
             "url": "https://in7co.in",
             "inLanguage": ["en-IN", "hi"],
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": { "@type": "EntryPoint", "urlTemplate": "https://in7co.in/?s={search_term_string}" },
-              "query-input": "required name=search_term_string",
-            },
           },
           {
             "@context": "https://schema.org",
