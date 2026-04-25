@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   title: 'Paise Jitne Wala Game 2026 – IN7 | UPI Games APK',
   description:
     'Best paise jitne wala game – IN7 Game APK download free. Game khel ke paise kaise kamaye? Earn real cash, UPI withdrawal games free download. ₹777 bonus!',
-  alternates: { canonical: 'https://in7co.in/paise-kamane-wala-game' },
+  alternates: { canonical: 'https://www.in7co.in/paise-kamane-wala-game' },
   openGraph: {
     title: 'Paise Jitne Wala Game 2026 – IN7 | UPI Games APK',
     description:
       'Best paise jitne wala game – IN7 Game APK download free. Game khel ke paise kaise kamaye? Earn real cash, UPI withdrawal games free download. ₹777 bonus!',
-    url: 'https://in7co.in/paise-kamane-wala-game',
+    url: 'https://www.in7co.in/paise-kamane-wala-game',
     images: [{ url: '/in7-game-banner.jpeg' }],
   },
 };
@@ -86,12 +86,12 @@ const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://in7co.in' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.in7co.in' },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Paise Kamane Wala Game',
-      item: 'https://in7co.in/paise-kamane-wala-game',
+      item: 'https://www.in7co.in/paise-kamane-wala-game',
     },
   ],
 };

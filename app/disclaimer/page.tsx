@@ -6,7 +6,7 @@ import { AlertTriangle, ShieldOff, AlertCircle, Clock, Wallet, Smile, LifeBuoy, 
 export const metadata: Metadata = {
   title: 'Disclaimer – IN7 Game | in7co.in',
   description: 'IN7 Game Disclaimer. Important legal information about using IN7 Game. 18+ only. For entertainment purposes. Skill-based gaming disclaimer.',
-  alternates: { canonical: 'https://in7co.in/disclaimer' },
+  alternates: { canonical: 'https://www.in7co.in/disclaimer' },
 };
 
 export default function Disclaimer() {

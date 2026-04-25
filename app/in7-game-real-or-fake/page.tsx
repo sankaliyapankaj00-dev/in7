@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   title: 'IN7 Game Real or Fake? Honest Review 2026 | Is IN7 Safe?',
   description:
     "Is IN7 Game real or fake? in7 game real or fake hai? Honest review – IN7 is India's legitimate platform. Customer care & safety facts.",
-  alternates: { canonical: 'https://in7co.in/in7-game-real-or-fake' },
+  alternates: { canonical: 'https://www.in7co.in/in7-game-real-or-fake' },
   openGraph: {
     title: 'IN7 Game Real or Fake? Honest Review 2026 | Is IN7 Safe?',
     description:
       "Is IN7 Game real or fake? in7 game real or fake hai? Honest review – IN7 is India's legitimate platform. Customer care & safety facts.",
-    url: 'https://in7co.in/in7-game-real-or-fake',
+    url: 'https://www.in7co.in/in7-game-real-or-fake',
     images: [{ url: '/in7-game-banner.jpeg' }],
   },
 };
@@ -68,12 +68,12 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://in7co.in' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.in7co.in' },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'IN7 Game Real or Fake',
-      item: 'https://in7co.in/in7-game-real-or-fake',
+      item: 'https://www.in7co.in/in7-game-real-or-fake',
     },
   ],
 };
@@ -94,7 +94,7 @@ const productSchema = {
   name: 'IN7 Game',
   description:
     'IN7 Game is India\'s #1 real-money earning game app. Download APK from in7co.in, register and get ₹777 bonus. Instant UPI withdrawals. 50 Lakh+ users.',
-  url: 'https://in7co.in',
+  url: 'https://www.in7co.in',
   brand: { '@type': 'Brand', name: 'IN7 Game' },
   aggregateRating: {
     '@type': 'AggregateRating',

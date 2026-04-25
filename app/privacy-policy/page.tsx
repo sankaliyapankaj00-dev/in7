@@ -6,7 +6,7 @@ import { FileText, Shield, Eye, Cookie, Link2, Lock, Baby, RefreshCw, Mail, Glob
 export const metadata: Metadata = {
   title: 'Privacy Policy – IN7 Game | in7co.in',
   description: 'IN7 Game Privacy Policy. Learn how we collect, use and protect your personal information. Your privacy and data security are our top priority.',
-  alternates: { canonical: 'https://in7co.in/privacy-policy' },
+  alternates: { canonical: 'https://www.in7co.in/privacy-policy' },
 };
 
 export default function PrivacyPolicy() {

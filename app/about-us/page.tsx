@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   title: 'About IN7 Game | Customer Care | Is IN7 Real? 2026',
   description: "About IN7 Game – India's #1 gaming platform. 24/7 customer care. Is IN7 real? YES – 50L+ users, instant UPI withdrawal. Official: in7co.in.",
   keywords: ['about in7 game', 'in7 game customer care number', 'in7 game customer care number india 24 7', 'in7 game real or fake', 'is in7 game safe', 'in7co.in', 'in7 game company', 'i am 7 game'],
-  alternates: { canonical: 'https://in7co.in/about-us' },
+  alternates: { canonical: 'https://www.in7co.in/about-us' },
   openGraph: {
     title: 'About IN7 Game | in7 game customer care | Is IN7 Real?',
     description: 'About IN7 Game. 24/7 customer care. IN7 game is REAL – 50L+ verified users. in7co.in official.',
-    url: 'https://in7co.in/about-us',
+    url: 'https://www.in7co.in/about-us',
     images: [{ url: '/in7-game-banner.jpeg', width: 1200, height: 630, alt: 'About IN7 Game' }],
   },
 };
@@ -22,10 +22,10 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'IN7 Game',
   alternateName: ['in7 apps', 'in7co.in', 'i am 7 game', 'ien7'],
-  url: 'https://in7co.in',
+  url: 'https://www.in7co.in',
   logo: {
     '@type': 'ImageObject',
-    url: 'https://in7co.in/in7-game-logo.jpg',
+    url: 'https://www.in7co.in/in7-game-logo.jpg',
     width: 512,
     height: 512,
   },
@@ -36,7 +36,7 @@ const organizationSchema = {
     contactOption: 'TollFree',
     areaServed: 'IN',
   },
-  sameAs: ['https://in7co.in'],
+  sameAs: ['https://www.in7co.in'],
   description: "IN7 Game is India's #1 online gaming and earning platform. 50 Lakh+ users. Instant UPI withdrawals. ₹777 signup bonus.",
   foundingLocation: { '@type': 'Country', name: 'India' },
   areaServed: 'IN',
@@ -46,8 +46,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://in7co.in' },
-    { '@type': 'ListItem', position: 2, name: 'About IN7 Game', item: 'https://in7co.in/about-us' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.in7co.in' },
+    { '@type': 'ListItem', position: 2, name: 'About IN7 Game', item: 'https://www.in7co.in/about-us' },
   ],
 };
 

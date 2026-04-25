@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   title: 'IN7 Game Register – in7 login registration | ₹777 2026',
   description: 'IN7 login registration guide. in7 game login, in7 com login, in7 login steps. Create IN7 account in 2 mins. Get ₹777 free signup bonus. OTP verified instantly.',
   keywords: ['in7 login registration', 'in 7 game register', 'in7 game login', 'in7 login', 'in7 com login', 'in7 com game login', 'in 7 game login download', 'how to register in7 game', 'in7 registration', 'in7 signup'],
-  alternates: { canonical: 'https://in7co.in/how-to-register' },
+  alternates: { canonical: 'https://www.in7co.in/how-to-register' },
   openGraph: {
     title: 'IN7 Game Register – in7 login registration | ₹777',
     description: 'in7 login registration, in7 com login guide. Register on IN7 in 2 minutes. Get ₹777 free bonus instantly.',
-    url: 'https://in7co.in/how-to-register',
+    url: 'https://www.in7co.in/how-to-register',
     images: [{ url: '/in7-game-banner.jpeg', width: 1200, height: 630, alt: 'IN7 Game Login Registration Guide' }],
   },
 };
@@ -248,8 +248,8 @@ export default function HowToRegister() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://in7co.in" },
-            { "@type": "ListItem", "position": 2, "name": "How to Register on IN7 Game", "item": "https://in7co.in/how-to-register" },
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.in7co.in" },
+            { "@type": "ListItem", "position": 2, "name": "How to Register on IN7 Game", "item": "https://www.in7co.in/how-to-register" },
           ],
         },
         {

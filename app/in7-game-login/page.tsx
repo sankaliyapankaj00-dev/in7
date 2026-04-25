@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: 'IN7 Game Login – in7 com login | Get ₹777 2026',
   description:
     'IN7 Game login guide. in7 com login, in7 login registration, in7 com game login step by step. New user? Download IN7 APK, register & get ₹777 bonus instantly.',
-  alternates: { canonical: 'https://in7co.in/in7-game-login' },
+  alternates: { canonical: 'https://www.in7co.in/in7-game-login' },
   openGraph: {
     title: 'IN7 Game Login – in7 com login | Get ₹777 2026',
     description:
       'IN7 Game login guide. in7 com login, in7 login registration, in7 com game login step by step. New user? Download IN7 APK, register & get ₹777 bonus instantly.',
-    url: 'https://in7co.in/in7-game-login',
+    url: 'https://www.in7co.in/in7-game-login',
     images: [{ url: '/in7-game-banner.jpeg' }],
   },
 };
@@ -57,8 +57,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://in7co.in' },
-    { '@type': 'ListItem', position: 2, name: 'IN7 Game Login', item: 'https://in7co.in/in7-game-login' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.in7co.in' },
+    { '@type': 'ListItem', position: 2, name: 'IN7 Game Login', item: 'https://www.in7co.in/in7-game-login' },
   ],
 };
 

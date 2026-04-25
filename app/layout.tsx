@@ -9,7 +9,7 @@ import SpinWheel from "@/components/SpinWheel";
 import MobileStickyBar from "@/components/MobileStickyBar";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://in7co.in'),
+  metadataBase: new URL('https://www.in7co.in'),
   title: {
     default: 'IN7 Game – Play Online, Earn & Withdraw Instantly | in7co.in',
     template: '%s | IN7 Game'
@@ -50,17 +50,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             "@type": "WebSite",
             "name": "IN7 Game",
             "alternateName": ["in 7", "in7 apps", "ln7", "aaiae", "i am 7 game", "in7 com game", "paise jitne wala game"],
-            "url": "https://in7co.in",
+            "url": "https://www.in7co.in",
             "inLanguage": ["en-IN", "hi"],
           },
           {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "IN7 Game",
-            "url": "https://in7co.in",
+            "url": "https://www.in7co.in",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://in7co.in/in7-game-logo.jpg",
+              "url": "https://www.in7co.in/in7-game-logo.jpg",
               "width": 512,
               "height": 512,
             },
@@ -69,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "contactType": "customer support",
               "availableLanguage": ["English", "Hindi"],
             },
-            "sameAs": ["https://in7co.in"],
+            "sameAs": ["https://www.in7co.in"],
           },
         ])}} />
       </body>

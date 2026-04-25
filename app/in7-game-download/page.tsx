@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   title: 'IN7 Game Download APK Free 2026 – Official App | ₹777',
   description: 'Download IN7 Game APK free for Android (in7 apk download, in7 com download). 25MB only. Get ₹777 bonus. Instant UPI withdrawal. Official: in7co.in',
   keywords: ['in7 download', 'in7 apk download', 'in7 game download apk', 'in 7 download', 'in7 com download', 'in7.com download', 'in7 com game download', 'in7 download apk', 'in 7 apk download', 'in 7 game download apk', 'upi withdrawal games free download', 'in7 app download', 'in7 game download for android', 'in7 game download play store', 'in7 com apk'],
-  alternates: { canonical: 'https://in7co.in/in7-game-download' },
+  alternates: { canonical: 'https://www.in7co.in/in7-game-download' },
   openGraph: {
     title: 'IN7 Game Download APK Free 2026 – Official Android App',
     description: 'Download IN7 APK free. in7 com download, in7 apk download. ₹777 bonus. Instant UPI withdrawal. Official: in7co.in',
-    url: 'https://in7co.in/in7-game-download',
+    url: 'https://www.in7co.in/in7-game-download',
     images: [{ url: '/in7-game-banner.jpeg', width: 1200, height: 630, alt: 'IN7 Game Download APK Free' }],
   },
 };
@@ -276,8 +276,8 @@ export default function In7GameDownload() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://in7co.in" },
-            { "@type": "ListItem", "position": 2, "name": "IN7 Game Download", "item": "https://in7co.in/in7-game-download" },
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.in7co.in" },
+            { "@type": "ListItem", "position": 2, "name": "IN7 Game Download", "item": "https://www.in7co.in/in7-game-download" },
           ],
         },
         {
@@ -290,8 +290,8 @@ export default function In7GameDownload() {
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
           "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "50000", "bestRating": "5" },
           "fileSize": "30MB",
-          "downloadUrl": "https://in7co.in/in7-game-download",
-          "url": "https://in7co.in",
+          "downloadUrl": "https://www.in7co.in/in7-game-download",
+          "url": "https://www.in7co.in",
         },
         {
           "@context": "https://schema.org",

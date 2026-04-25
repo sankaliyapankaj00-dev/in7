@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   title: 'IN7 Game App – Download in7 apps APK Free for Android',
   description: 'IN7 Game App (in7 apps, in7 com app) – Download APK free. 20+ games, ₹777 bonus, instant UPI withdrawal. 18+ only. Official: in7co.in',
   keywords: ['in7 apps', 'in 7 apps', 'in7 com app', 'in7 app download', 'in 7 app', 'in7 game app', 'in7 com game online', 'in7 game online apk', 'in 7 game app', 'in7 com game', 'in7 online game'],
-  alternates: { canonical: 'https://in7co.in/in7-game-app' },
+  alternates: { canonical: 'https://www.in7co.in/in7-game-app' },
   openGraph: {
     title: 'IN7 Game App – in7 apps | in7 com app | Android APK 2026',
     description: 'IN7 Game App – in7 apps, in7 com app. Download APK 2026. ₹777 bonus. 20+ games. Instant UPI withdrawal.',
-    url: 'https://in7co.in/in7-game-app',
+    url: 'https://www.in7co.in/in7-game-app',
     images: [{ url: '/in7-game-banner.jpeg', width: 1200, height: 630, alt: 'IN7 Game App – in7 apps' }],
   },
 };
@@ -235,8 +235,8 @@ export default function In7GameApp() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://in7co.in" },
-            { "@type": "ListItem", "position": 2, "name": "IN7 Game App", "item": "https://in7co.in/in7-game-app" },
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.in7co.in" },
+            { "@type": "ListItem", "position": 2, "name": "IN7 Game App", "item": "https://www.in7co.in/in7-game-app" },
           ],
         },
         {
@@ -248,8 +248,8 @@ export default function In7GameApp() {
           "applicationCategory": "GameApplication",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
           "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "50000", "bestRating": "5" },
-          "url": "https://in7co.in/in7-game-app",
-          "downloadUrl": "https://in7co.in/in7-game-download",
+          "url": "https://www.in7co.in/in7-game-app",
+          "downloadUrl": "https://www.in7co.in/in7-game-download",
         },
         {
           "@context": "https://schema.org",

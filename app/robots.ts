@@ -16,6 +16,6 @@ export default function robots(): MetadataRoute.Robots {
         '/feed/',
       ],
     },
-    sitemap: 'https://in7co.in/sitemap.xml',
+    sitemap: 'https://www.in7co.in/sitemap.xml',
   };
 }

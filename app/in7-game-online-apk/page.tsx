@@ -7,13 +7,13 @@ import { Download, CheckCircle, Zap, Shield, Smartphone, Globe, Star, Users, Ind
 
 export const metadata: Metadata = {
   title: 'IN7 Game Online APK – in7 game online apk Free 2026',
-  description: 'Download IN7 game online APK for Android free. in7 game online apk, in7 com game online – install in 2 min, get ₹777 bonus & withdraw via UPI. Official: in7co.in',
+  description: 'IN7 game online APK free for Android. in7 com game online: install in 2 min, get ₹777 bonus, instant UPI withdrawal. Official: in7co.in',
   keywords: ['in7 game online apk', 'in7 game online', 'in7 online apk', 'in7 com game online', 'in7 online game apk', 'in7 game online download', 'in7 game apk online'],
-  alternates: { canonical: 'https://in7co.in/in7-game-online-apk' },
+  alternates: { canonical: 'https://www.in7co.in/in7-game-online-apk' },
   openGraph: {
     title: 'IN7 Game Online APK – Download Free 2026 | in7 game online',
     description: 'Download IN7 game online APK free. ₹777 bonus, instant UPI withdrawal. Official in7 online apk from in7co.in.',
-    url: 'https://in7co.in/in7-game-online-apk',
+    url: 'https://www.in7co.in/in7-game-online-apk',
     images: [{ url: '/in7-game-banner.jpeg', width: 1200, height: 630, alt: 'IN7 Game Online APK Download' }],
   },
 };
@@ -49,8 +49,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://in7co.in' },
-    { '@type': 'ListItem', position: 2, name: 'IN7 Game Online APK', item: 'https://in7co.in/in7-game-online-apk' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.in7co.in' },
+    { '@type': 'ListItem', position: 2, name: 'IN7 Game Online APK', item: 'https://www.in7co.in/in7-game-online-apk' },
   ],
 };
 
@@ -63,8 +63,8 @@ const softwareSchema = {
   applicationCategory: 'GameApplication',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
   aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '50000', bestRating: '5' },
-  downloadUrl: 'https://in7co.in/in7-game-online-apk',
-  url: 'https://in7co.in',
+  downloadUrl: 'https://www.in7co.in/in7-game-online-apk',
+  url: 'https://www.in7co.in',
 };
 
 const faqSchema = {
