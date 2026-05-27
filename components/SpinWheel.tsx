@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { RotateCw, Download, Trophy, X } from 'lucide-react';
 
-const DL_URL = "https://acc.in7game.org/api/web/share/index.html?ic=AA6YDBPC&ts=1774462560&m=2&lang=hi&id=1";
+const DL_URL = "https://share.in7game.org/share/agent/SA6YDBPC?data=eyJtIjoxLCJsYW5nIjoiaGkiLCJpZCI6MX0=";
 const segments = ['₹100', '₹777', '₹200', '₹500', '₹300', '₹1000'];
 const colors = ['#e63946', '#1a1a2e', '#c1121f', '#0d1117', '#e63946', '#1a1a2e'];
 

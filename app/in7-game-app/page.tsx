@@ -5,7 +5,7 @@ import DownloadButton from '@/components/DownloadButton';
 import FAQSection from '@/components/FAQSection';
 import { Gamepad2, Zap, Gift, Users, BarChart2, Bell, Shield, Clock, MessageCircle, Download, Smartphone, FileText, Wallet, Trophy } from 'lucide-react';
 
-const DL_URL = "https://acc.in7game.org/api/web/share/index.html?ic=AA6YDBPC&ts=1774462560&m=2&lang=hi&id=1";
+const DL_URL = "https://share.in7game.org/share/agent/SA6YDBPC?data=eyJtIjoxLCJsYW5nIjoiaGkiLCJpZCI6MX0=";
 
 export const metadata: Metadata = {
   title: 'IN7 Game App – Download in7 apps APK Free for Android',

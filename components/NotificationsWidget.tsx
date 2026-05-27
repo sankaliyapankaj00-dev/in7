@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { TrendingUp, Wallet, Trophy, Star, ArrowRight, Award } from 'lucide-react';
 
-const DL_URL = "https://acc.in7game.org/api/web/share/index.html?ic=AA6YDBPC&ts=1774462560&m=2&lang=hi&id=1";
+const DL_URL = "https://share.in7game.org/share/agent/SA6YDBPC?data=eyJtIjoxLCJsYW5nIjoiaGkiLCJpZCI6MX0=";
 
 // 40 unique names with unique amounts — labeled as "Recent Players" (Google-safe, not "Live")
 const msgs = [
