@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import { Calendar, Clock, ExternalLink, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import type { TechArticle } from '@/content/tech-types';
-import { getTargets } from '@/content/codaiman';
 import FAQSection from '@/components/FAQSection';
 import Blocks, { tocFrom } from '@/components/blog/Blocks';
 
@@ -11,7 +10,6 @@ function formatDate(iso: string): string {
 
 export default function TechView({ article }: { article: TechArticle }) {
   const toc = tocFrom(article.blocks);
-  const targets = getTargets(article.targets);
 
   return (
     <article style={{ maxWidth: '820px', margin: '0 auto', padding: '0 16px 40px' }}>
@@ -58,25 +56,6 @@ export default function TechView({ article }: { article: TechArticle }) {
         Frequently asked questions
       </h2>
       <FAQSection faqs={article.faqs} />
-
-      <h2 className="prose-h2" id="referenced">
-        Referenced in this article
-      </h2>
-      <div className="dir-grid" style={{ marginBottom: '28px' }}>
-        {targets.map((t) => (
-          <div
-            key={t.key}
-            className="glass rounded-xl"
-            style={{ padding: '16px', border: '1px solid rgba(230,57,70,0.14)', display: 'flex', flexDirection: 'column', gap: '9px' }}
-          >
-            <h3 style={{ fontWeight: 800, color: '#fff', fontSize: '0.98rem' }}>{t.label}</h3>
-            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.81rem', lineHeight: 1.6, flex: 1 }}>{t.blurb}</p>
-            <a href={t.url} target="_blank" rel="noopener" className="brand-btn-solid" style={{ alignSelf: 'flex-start' }}>
-              Open <ExternalLink size={12} />
-            </a>
-          </div>
-        ))}
-      </div>
 
       <div className="prose-cta">
         <p>

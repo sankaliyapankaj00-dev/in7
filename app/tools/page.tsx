@@ -141,21 +141,6 @@ export default function ToolsIndex() {
         </div>
       </section>
 
-      <section style={{ maxWidth: '1080px', margin: '0 auto', padding: '36px 16px 48px' }}>
-        <div className="prose-cta">
-          <p>
-            All four products come from <RichText text={link('home', 2)} />, which also does client work across{' '}
-            <RichText text={link('web', 0)} />, <RichText text={link('mobile', 0)} />,{' '}
-            <RichText text={link('cloud', 0)} /> and <RichText text={link('uiux', 0)} />. Their{' '}
-            <RichText text={link('projects', 0)} /> covers AI ERP systems, e-commerce, recruitment, logistics and
-            FinTech lending.
-          </p>
-          <a href={toolhub.url} target="_blank" rel="noopener" className="btn-gold">
-            <Wrench size={14} strokeWidth={2.5} />
-            Browse 1,000+ tools
-          </a>
-        </div>
-      </section>
     </>
   );
 }

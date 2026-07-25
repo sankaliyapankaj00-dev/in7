@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, Clock, ArrowRight, ExternalLink } from 'lucide-react';
 import { techArticles, techCats } from '@/content/tech';
-import { getTargets, productKeys, targets as allTargets, link } from '@/content/codaiman';
+import { getTargets, productKeys, link } from '@/content/codaiman';
 import RichText from '@/components/blog/RichText';
 
 const BASE = 'https://www.in7co.in';
@@ -35,7 +35,6 @@ function formatDate(iso: string): string {
 
 export default function TechIndex() {
   const products = getTargets(productKeys);
-  const serviceTargets = getTargets(['web', 'mobile', 'cloud', 'uiux', 'seo', 'builder']);
 
   const blogSchema = {
     '@context': 'https://schema.org',
@@ -136,60 +135,6 @@ export default function TechIndex() {
         </div>
       </section>
 
-      {/* Services index */}
-      <section style={{ maxWidth: '1080px', margin: '0 auto', padding: '44px 16px 0' }}>
-        <h2 className="section-h2" style={{ fontWeight: 900, marginBottom: '6px' }}>
-          Services <span style={{ color: '#e63946' }}>behind these guides</span>
-        </h2>
-        <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.92rem', marginBottom: '20px' }}>
-          Everything covered here is something the team does as client work. Useful if you would rather hand it over
-          than own it.
-        </p>
-        <div className="prose-table-wrap" style={{ margin: 0 }}>
-          <table className="prose-table">
-            <thead>
-              <tr>
-                <th>Service</th>
-                <th>What it covers</th>
-                <th>Link</th>
-              </tr>
-            </thead>
-            <tbody>
-              {serviceTargets.map((t) => (
-                <tr key={t.key}>
-                  <td style={{ fontWeight: 700, color: 'rgba(255,255,255,0.9)', whiteSpace: 'nowrap' }}>{t.label}</td>
-                  <td>{t.blurb}</td>
-                  <td>
-                    <a href={t.url} target="_blank" rel="noopener" className="content-link content-link-ext" style={{ whiteSpace: 'nowrap' }}>
-                      Open <ExternalLink size={10} style={{ display: 'inline', verticalAlign: 'baseline' }} />
-                    </a>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      {/* Full target index */}
-      <section style={{ maxWidth: '1080px', margin: '0 auto', padding: '44px 16px 48px' }}>
-        <h2 className="section-h2" style={{ fontWeight: 900, marginBottom: '20px' }}>
-          Full <span style={{ color: '#e63946' }}>reference index</span>
-        </h2>
-        <ul style={{ listStyle: 'none', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '10px', padding: 0 }}>
-          {allTargets.map((t) => (
-            <li
-              key={t.key}
-              className="glass rounded-xl"
-              style={{ padding: '11px 14px', border: '1px solid rgba(255,255,255,0.08)' }}
-            >
-              <a href={t.url} target="_blank" rel="noopener" className="content-link content-link-ext" style={{ fontWeight: 700, fontSize: '0.86rem' }}>
-                {t.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
     </>
   );
 }

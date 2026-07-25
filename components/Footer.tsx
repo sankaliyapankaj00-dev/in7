@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Download, Shield, AlertTriangle } from 'lucide-react';
-import { getBrands } from '@/content/brands';
 
 const DL_URL = "https://share.in7game.org/share/agent/SA6YDBPC?data=eyJtIjoxLCJsYW5nIjoiaGkiLCJpZCI6MX0=";
 
@@ -10,17 +9,18 @@ const downloadLinks = [['/in7-game-download', 'IN7 Game Download'], ['/in7-game-
 const legalLinks    = [['/about-us', 'About Us'], ['/privacy-policy', 'Privacy Policy'], ['/disclaimer', 'Disclaimer']] as const;
 const guideLinks    = [['/blog', 'Blog'], ['/gaming-apps', 'All Gaming Apps'], ['/tools', 'Free Online Tools'], ['/tech', 'Tech Guides'], ['/about-us', 'About Us']] as const;
 
-/** Products from CodeAiMan, who build and maintain this site. */
-const BUILT_BY = [
-  ['https://codaiman.com', 'CodeAiMan'],
-  ['https://codaiman.com/toolhub', 'ToolHub'],
-  ['https://codaiman.com/siteiq', 'siteIQ'],
-  ['https://codaiman.com/fluenzo', 'Fluenzo'],
-  ['https://codaiman.com/cws', 'Code With Squad'],
-] as const;
-
-/** A short selection of platforms we review. The full list lives on /gaming-apps. */
-const NETWORK_KEYS: string[] = ['in7gaming', 'xx7', 'ind9', 'mast79', 'raja7', 'inr360'];
+/**
+ * Deliberately NO outbound link columns here.
+ *
+ * A site-wide footer link appears on every page, which means one endorsement
+ * repeated ~100 times. Search engines discount those to almost nothing, so they
+ * add no value, while a footer full of them is a well-known link-scheme
+ * footprint. Outbound links belong inside the content that justifies them:
+ * /gaming-apps for the platform directory, /tools and /tech for the rest.
+ *
+ * The single exception is the build credit in the bottom bar, which is what a
+ * real agency-built site carries.
+ */
 
 function FooterCol({ title, items }: { title: string; items: readonly (readonly [string, string])[] }) {
   return (
@@ -34,43 +34,6 @@ function FooterCol({ title, items }: { title: string; items: readonly (readonly 
             <Link href={href} className="footer-link">{label}</Link>
           </li>
         ))}
-      </ul>
-    </div>
-  );
-}
-
-function BuiltByCol() {
-  return (
-    <div>
-      <h4 style={{ color: '#e63946', fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '14px' }}>
-        Built By
-      </h4>
-      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-        {BUILT_BY.map(([href, label]) => (
-          <li key={href}>
-            <a href={href} target="_blank" rel="noopener" className="footer-link">{label}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function NetworkCol() {
-  return (
-    <div>
-      <h4 style={{ color: '#e63946', fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '14px' }}>
-        Apps We Review
-      </h4>
-      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-        {getBrands(NETWORK_KEYS).map((b) => (
-          <li key={b.key}>
-            <a href={b.url} target="_blank" rel="noopener" className="footer-link">{b.name}</a>
-          </li>
-        ))}
-        <li>
-          <Link href="/gaming-apps" className="footer-link" style={{ color: '#ff8a91' }}>See all 19 &rsaquo;</Link>
-        </li>
       </ul>
     </div>
   );
@@ -103,8 +66,6 @@ export default function Footer() {
           <FooterCol title="Pages"    items={pageLinks} />
           <FooterCol title="Download" items={downloadLinks} />
           <FooterCol title="Guides"   items={guideLinks} />
-          <NetworkCol />
-          <BuiltByCol />
           <FooterCol title="Legal"    items={legalLinks} />
         </div>
 
@@ -124,7 +85,7 @@ export default function Footer() {
           </div>
           <div className="footer-disclaimer" style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'rgba(255,255,255,0.25)', fontSize: '0.7rem', textAlign: 'center' }}>
             <Shield size={10} style={{flexShrink: 0}} />
-            <span>Copyright &copy; 2026 in7co.in &nbsp;|&nbsp; IN7 Game — India&apos;s #1 Online Gaming Platform</span>
+            <span>Copyright &copy; 2026 in7co.in &nbsp;|&nbsp; IN7 Game, India&apos;s #1 Online Gaming Platform</span>
           </div>
         </div>
       </div>

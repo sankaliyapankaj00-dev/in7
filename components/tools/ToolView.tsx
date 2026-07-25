@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ExternalLink, ArrowRight, Wrench, Lightbulb } from 'lucide-react';
+import { ArrowRight, Wrench, Lightbulb } from 'lucide-react';
 import type { Tool } from '@/content/tool-types';
 import { getTools } from '@/content/tools';
 import { getTarget, link } from '@/content/codaiman';
@@ -8,7 +8,6 @@ import RichText from '@/components/blog/RichText';
 
 export default function ToolView({ tool }: { tool: Tool }) {
   const related = getTools(tool.related);
-  const toolhub = getTarget('toolhub');
   const secondary = getTarget(tool.target);
 
   return (
@@ -30,12 +29,9 @@ export default function ToolView({ tool }: { tool: Tool }) {
         </p>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-          <a href={toolhub.url} target="_blank" rel="noopener" className="btn-gold">
-            <Wrench size={14} strokeWidth={2.5} />
-            Open {tool.name} on ToolHub
-          </a>
           <Link href="/tools" className="btn-outline" style={{ fontSize: '0.85rem', padding: '10px 18px' }}>
-            All tools
+            <Wrench size={14} strokeWidth={2.5} />
+            All tool guides
           </Link>
         </div>
       </header>
@@ -107,23 +103,8 @@ export default function ToolView({ tool }: { tool: Tool }) {
       <p className="prose-p">
         This tool is part of <RichText text={link('toolhub', 3)} />, a library of over 1,000 browser-based tools
         covering PDF, image, video, audio, text and developer work. Everything runs in the browser and none of it needs
-        an account.
+        an account. Related to this page: {secondary.blurb.toLowerCase()}
       </p>
-      <p className="prose-p">
-        ToolHub is built by <RichText text={link('home', 1)} />, an AI-first software company in Ahmedabad. Related to
-        this page: <RichText text={`[${secondary.label}](${secondary.url})`} /> {secondary.blurb.toLowerCase()}
-      </p>
-
-      <div className="prose-cta">
-        <p>
-          <strong style={{ color: 'rgba(255,255,255,0.95)' }}>{tool.name}, in the browser: </strong>
-          no install, no sign-up, no upload queue. Part of the ToolHub library from CodeAiMan.
-        </p>
-        <a href={toolhub.url} target="_blank" rel="noopener" className="btn-gold">
-          <ExternalLink size={14} strokeWidth={2.5} />
-          Open ToolHub
-        </a>
-      </div>
 
       {/* Related */}
       {related.length > 0 && (

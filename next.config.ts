@@ -1,6 +1,22 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Never let a PDF into the index. Internal planning documents and handouts
+  // should not appear in search results, and robots.txt alone does not prevent
+  // indexing of a URL that is linked from somewhere else.
+  async headers() {
+    return [
+      {
+        source: '/:path*.pdf',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive' }],
+      },
+      {
+        source: '/docs/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive' }],
+      },
+    ];
+  },
+
   async redirects() {
     return [
       // ── Fix: old wrong redirect removed ──
