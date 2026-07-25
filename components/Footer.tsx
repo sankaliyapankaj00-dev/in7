@@ -1,12 +1,26 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Download, Shield, AlertTriangle } from 'lucide-react';
+import { getBrands } from '@/content/brands';
 
 const DL_URL = "https://share.in7game.org/share/agent/SA6YDBPC?data=eyJtIjoxLCJsYW5nIjoiaGkiLCJpZCI6MX0=";
 
 const pageLinks     = [['/', 'Home'], ['/in7-game-app', 'IN7 App'], ['/in7-game-download', 'Download'], ['/how-to-register', 'Register']] as const;
 const downloadLinks = [['/in7-game-download', 'IN7 Game Download'], ['/in7-game-app', 'IN7 Game App'], ['/how-to-register', 'How to Register']] as const;
 const legalLinks    = [['/about-us', 'About Us'], ['/privacy-policy', 'Privacy Policy'], ['/disclaimer', 'Disclaimer']] as const;
+const guideLinks    = [['/blog', 'Blog'], ['/gaming-apps', 'All Gaming Apps'], ['/tools', 'Free Online Tools'], ['/tech', 'Tech Guides'], ['/about-us', 'About Us']] as const;
+
+/** Products from CodeAiMan, who build and maintain this site. */
+const BUILT_BY = [
+  ['https://codaiman.com', 'CodeAiMan'],
+  ['https://codaiman.com/toolhub', 'ToolHub'],
+  ['https://codaiman.com/siteiq', 'siteIQ'],
+  ['https://codaiman.com/fluenzo', 'Fluenzo'],
+  ['https://codaiman.com/cws', 'Code With Squad'],
+] as const;
+
+/** A short selection of platforms we review. The full list lives on /gaming-apps. */
+const NETWORK_KEYS: string[] = ['in7gaming', 'xx7', 'ind9', 'mast79', 'raja7', 'inr360'];
 
 function FooterCol({ title, items }: { title: string; items: readonly (readonly [string, string])[] }) {
   return (
@@ -20,6 +34,43 @@ function FooterCol({ title, items }: { title: string; items: readonly (readonly 
             <Link href={href} className="footer-link">{label}</Link>
           </li>
         ))}
+      </ul>
+    </div>
+  );
+}
+
+function BuiltByCol() {
+  return (
+    <div>
+      <h4 style={{ color: '#e63946', fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '14px' }}>
+        Built By
+      </h4>
+      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        {BUILT_BY.map(([href, label]) => (
+          <li key={href}>
+            <a href={href} target="_blank" rel="noopener" className="footer-link">{label}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function NetworkCol() {
+  return (
+    <div>
+      <h4 style={{ color: '#e63946', fontWeight: 700, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '14px' }}>
+        Apps We Review
+      </h4>
+      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        {getBrands(NETWORK_KEYS).map((b) => (
+          <li key={b.key}>
+            <a href={b.url} target="_blank" rel="noopener" className="footer-link">{b.name}</a>
+          </li>
+        ))}
+        <li>
+          <Link href="/gaming-apps" className="footer-link" style={{ color: '#ff8a91' }}>See all 19 &rsaquo;</Link>
+        </li>
       </ul>
     </div>
   );
@@ -51,6 +102,9 @@ export default function Footer() {
 
           <FooterCol title="Pages"    items={pageLinks} />
           <FooterCol title="Download" items={downloadLinks} />
+          <FooterCol title="Guides"   items={guideLinks} />
+          <NetworkCol />
+          <BuiltByCol />
           <FooterCol title="Legal"    items={legalLinks} />
         </div>
 

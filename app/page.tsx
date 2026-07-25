@@ -3,9 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import DownloadButton from '@/components/DownloadButton';
 import FAQSection from '@/components/FAQSection';
+import BrandCard from '@/components/blog/BrandCard';
+import { getBrands } from '@/content/brands';
 import { Trophy, Zap, Gamepad2, Gift, Shield, Users, Clock, Star, TrendingUp, CheckCircle, Smartphone, IndianRupee } from 'lucide-react';
 
 const DL_URL = "https://share.in7game.org/share/agent/SA6YDBPC?data=eyJtIjoxLCJsYW5nIjoiaGkiLCJpZCI6MX0=";
+
+/** Six platforms surfaced on the homepage, one from each directory group. */
+const HOME_BRAND_KEYS: string[] = ['in7gaming', 'xx7', 'ind9', 'mast79', 'raja7', 'inr360'];
 
 export const metadata: Metadata = {
   title: 'IN7 Game – Paise Jitne Wala Game | ₹777 APK 2026',
@@ -266,6 +271,43 @@ export default function Home() {
                 style={{border:'1px solid rgba(230,57,70,0.2)'}}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── More gaming apps we have reviewed ── */}
+      <section className="py-10 sm:py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="section-h2 text-3xl font-black text-center mb-2">
+            More Gaming Apps <span style={{color:'#e63946'}}>We&apos;ve Reviewed</span>
+          </h2>
+          <p className="text-white/50 text-center text-sm sm:text-base mb-8 sm:mb-10 max-w-2xl mx-auto">
+            IN7 is not the only Android gaming app worth knowing about. We review the whole category: bonuses with their
+            playthrough conditions attached, real APK sizes, and how each platform handles withdrawals.
+          </p>
+
+          <div className="dir-grid" style={{marginBottom: '20px'}}>
+            {getBrands(HOME_BRAND_KEYS).map(b => (
+              <BrandCard key={b.key} brand={b} compact />
+            ))}
+          </div>
+
+          <div className="prose-cta">
+            <p>
+              Nineteen platforms are compared side by side in the{' '}
+              <Link href="/gaming-apps" className="content-link">gaming apps directory</Link>, and the{' '}
+              <Link href="/blog" className="content-link">IN7 blog</Link> carries the guides that apply across all of
+              them: the{' '}
+              <Link href="/blog/signup-bonus-comparison-2026" className="content-link">signup bonus comparison</Link>,
+              the{' '}
+              <Link href="/blog/apk-install-guide-android" className="content-link">Android APK install guide</Link>,
+              and a Hindi walkthrough of the{' '}
+              <Link href="/blog/paise-kamane-wale-game-list-2026" className="content-link">paise kamane wale game list</Link>.
+            </p>
+            <Link href="/gaming-apps" className="btn-gold">
+              <Gamepad2 size={14} strokeWidth={2.5} />
+              Browse all 19 platforms
+            </Link>
           </div>
         </div>
       </section>

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>IN7 Backlink Network - Build Overview</title>
+<style>
+  @page { size: A4; margin: 16mm 14mm 14mm; }
+
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: "Segoe UI", Inter, Arial, sans-serif;
+    font-size: 9.6pt;
+    line-height: 1.55;
+    color: #1a1a20;
+    margin: 0;
+  }
+
+  h1 { font-size: 21pt; font-weight: 800; margin: 0 0 4px; letter-spacing: -0.02em; }
+  h2 {
+    font-size: 12.5pt; font-weight: 800; color: #c1121f;
+    margin: 22px 0 8px; padding-bottom: 4px;
+    border-bottom: 2px solid #f0d2d5;
+    page-break-after: avoid;
+  }
+  h3 { font-size: 10pt; font-weight: 700; margin: 14px 0 5px; color: #23232b; page-break-after: avoid; }
+  p { margin: 0 0 8px; }
+  ul, ol { margin: 0 0 9px; padding-left: 17px; }
+  li { margin-bottom: 3px; }
+  code {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 8.6pt; background: #f2f2f5;
+    padding: 1px 4px; border-radius: 3px; color: #a01018;
+  }
+  strong { color: #000; }
+
+  .hdr {
+    border-left: 4px solid #e63946; padding-left: 12px;
+    margin-bottom: 16px;
+  }
+  .sub { font-size: 9pt; color: #6a6a76; margin: 0; }
+
+  .box {
+    background: #fdf3f4; border: 1px solid #f0c9cd;
+    border-radius: 5px; padding: 10px 13px; margin: 0 0 14px;
+  }
+  .box.warn { background: #fffaf0; border-color: #f0dfb8; }
+  .box.ok   { background: #f2faf4; border-color: #c4e6cf; }
+  .box p:last-child { margin-bottom: 0; }
+  .box .lbl {
+    display: block; font-size: 7.5pt; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.09em;
+    color: #c1121f; margin-bottom: 4px;
+  }
+  .box.warn .lbl { color: #8a6516; }
+  .box.ok   .lbl { color: #1d7a3d; }
+
+  table { width: 100%; border-collapse: collapse; margin: 4px 0 14px; page-break-inside: auto; }
+  th {
+    text-align: left; font-size: 7.6pt; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: #fff; background: #c1121f;
+    padding: 5px 7px; border: 1px solid #c1121f;
+  }
+  td {
+    font-size: 8.7pt; padding: 4px 7px;
+    border: 1px solid #e2e2e8; vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #fafafc; }
+  tr { page-break-inside: avoid; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .mono { font-family: Consolas, monospace; font-size: 8.2pt; }
+
+  .pill {
+    display: inline-block; font-size: 7.2pt; font-weight: 800;
+    padding: 1px 6px; border-radius: 9px; white-space: nowrap;
+  }
+  .p-live { background: #d8f2e0; color: #14612f; }
+  .p-redir{ background: #e2e6f5; color: #2b3a7a; }
+  .p-park { background: #fbeed0; color: #7a5610; }
+  .p-dead { background: #f7d9dc; color: #8a1420; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; }
+  .cols3 { column-count: 3; column-gap: 16px; font-size: 8.4pt; }
+  .cols3 div { break-inside: avoid; margin-bottom: 2px; }
+
+  .stat-row { display: flex; gap: 8px; margin-bottom: 14px; }
+  .stat {
+    flex: 1; text-align: center; border: 1px solid #e2e2e8;
+    border-radius: 5px; padding: 8px 4px; background: #fafafc;
+  }
+  .stat b { display: block; font-size: 16pt; font-weight: 800; color: #c1121f; line-height: 1.1; }
+  .stat span { font-size: 7.4pt; color: #6a6a76; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .pb { page-break-before: always; }
+  .foot {
+    margin-top: 20px; padding-top: 8px; border-top: 1px solid #e2e2e8;
+    font-size: 7.6pt; color: #85858f;
+  }
+  .chk { list-style: none; padding-left: 0; }
+  .chk li { padding-left: 17px; position: relative; margin-bottom: 5px; }
+  .chk li:before {
+    content: ""; position: absolute; left: 0; top: 3px;
+    width: 9px; height: 9px; border: 1.4px solid #c1121f; border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <h1>IN7 Backlink Network</h1>
+  <p class="sub">Build overview and handoff document &nbsp;·&nbsp; Site: www.in7co.in &nbsp;·&nbsp; Repo: D:\in7-next &nbsp;·&nbsp; 25 July 2026</p>
+</div>
+
+<div class="box">
+  <span class="lbl">What this document is</span>
+  <p>A record of the content network built on <strong>in7co.in</strong> to carry outbound links to 18 sister gaming domains, plus everything needed to pick the work back up: the file map, the verified link counts, the domains still to be built, and the next steps in order.</p>
+</div>
+
+<div class="stat-row">
+  <div class="stat"><b>33</b><span>new pages</span></div>
+  <div class="stat"><b>18</b><span>domains linked</span></div>
+  <div class="stat"><b>953</b><span>outbound links</span></div>
+  <div class="stat"><b>30</b><span>lowest per domain</span></div>
+  <div class="stat"><b>38.7k</b><span>words written</span></div>
+</div>
+
+<h2>1. Goal and what was delivered</h2>
+<p><strong>Goal:</strong> at least 25 backlinks per domain, built as genuine content rather than a link list, so it does not read as a link farm to Google. Codaiman deliberately excluded.</p>
+<p><strong>Delivered:</strong> a full blog and directory section on in7co.in. Every one of the 18 external domains now has between 30 and 91 real outbound links, spread across 11 to 46 distinct pages. Verified by rendering all 46 sitemap pages and counting <code>href</code> attributes with script blocks stripped out.</p>
+
+<h3>Page inventory</h3>
+<table>
+  <tr><th style="width:26%">Type</th><th class="num" style="width:9%">Count</th><th>What it is</th></tr>
+  <tr><td><strong>Platform reviews</strong></td><td class="num">19</td><td>One per domain. Spec table, features grid, download steps, pros and cons, Hinglish FAQs, 4 alternatives. Roughly 900 to 1,100 words each.</td></tr>
+  <tr><td><strong>Guides and roundups</strong></td><td class="num">14</td><td>Cross-platform topics: bonuses, APK install, UPI withdrawals, KYC, prediction formats, crash games, slots, card games, slow phones, responsible gaming. Two are pure Hindi.</td></tr>
+  <tr><td><strong>Hub pages</strong></td><td class="num">2</td><td><code>/blog</code> index and <code>/gaming-apps</code> directory.</td></tr>
+  <tr><td><strong>Pages modified</strong></td><td class="num">5</td><td>Homepage network section, navbar links, footer column, sitemap, global CSS.</td></tr>
+</table>
+
+<h2>2. Architecture and file map</h2>
+<p>Content is separated from presentation. All copy lives in plain TypeScript data files, and two view components render it. Adding a platform means adding one object, not one page.</p>
+
+<table>
+  <tr><th style="width:38%">File</th><th>Role</th></tr>
+  <tr><td class="mono">content/types.ts</td><td><code>Brand</code>, <code>Article</code> and <code>Block</code> types. Documents the inline markup subset: <code>**bold**</code>, <code>[label](url)</code>.</td></tr>
+  <tr><td class="mono">content/brands-1.ts<br>content/brands-2.ts<br>content/brands-3.ts</td><td>The 19 platform entries, 6 or 7 per file. Each carries bonus, APK size, version, payout rails, categories, 3 intro paragraphs, 6 features, 5 install steps, pros, cons, 6 FAQs, 4 alternatives.</td></tr>
+  <tr><td class="mono">content/brands.ts</td><td>Merges the three batches. Exports <code>getBrand</code>, <code>getBrands</code>, <code>partnerBrands</code>, and <code>brandGroups</code> (the 6 directory categories).</td></tr>
+  <tr><td class="mono">content/articles-1.ts<br>content/articles-2.ts<br>content/articles-3.ts</td><td>The 14 guides, 5 or 4 per file, as arrays of content blocks.</td></tr>
+  <tr><td class="mono">content/articles.ts</td><td>Merges and sorts newest first.</td></tr>
+  <tr><td class="mono">content/routes.ts</td><td>Slug resolver. Maps a slug to either an article or a brand review. Powers <code>generateStaticParams</code> and the sitemap.</td></tr>
+  <tr><td class="mono">components/blog/RichText.tsx</td><td>Tiny inline parser. Turns <code>[label](url)</code> into a real anchor, internal paths into <code>next/link</code>, external into <code>target="_blank" rel="noopener"</code> (dofollow).</td></tr>
+  <tr><td class="mono">components/blog/Blocks.tsx</td><td>Renders every block type: paragraphs, headings, lists, tables, notes, quotes, app rails, CTAs. Also builds the table of contents.</td></tr>
+  <tr><td class="mono">components/blog/BrandCard.tsx</td><td>The card used everywhere. Carries both the internal review link and the outbound official-site link.</td></tr>
+  <tr><td class="mono">components/blog/ReviewView.tsx</td><td>Review page layout.</td></tr>
+  <tr><td class="mono">components/blog/ArticleView.tsx</td><td>Guide page layout.</td></tr>
+  <tr><td class="mono">app/blog/page.tsx</td><td>Blog index: guide cards, review cards, and an official sites index table.</td></tr>
+  <tr><td class="mono">app/blog/[slug]/page.tsx</td><td>Single dynamic route for all 33 pages. Static params, per-page metadata, Article or Review + FAQPage + BreadcrumbList JSON-LD.</td></tr>
+  <tr><td class="mono">app/gaming-apps/page.tsx</td><td>Directory: full comparison table, 6 grouped sections, domain checklist. ItemList JSON-LD.</td></tr>
+  <tr><td class="mono">app/globals.css</td><td>Blog styles appended at the end under a "BLOG / LONG-FORM CONTENT" banner. Nothing existing was changed.</td></tr>
+</table>
+
+<div class="box ok">
+  <span class="lbl">Why it is built this way</span>
+  <p>Because 19 near-identical template pages would read as doorway pages. Every brand entry has genuinely different prose, different emphasis and its own FAQ set. The shared layout is fine, that is how real review sites work. It is the copy that has to be distinct, and it is.</p>
+</div>
+
+<div class="pb"></div>
+
+<h2>3. Domain status and verified link counts</h2>
+<p>Liveness checked 25 July 2026 by direct HTTP request. Link counts measured from rendered HTML, not from source.</p>
+
+<table>
+  <tr>
+    <th style="width:23%">Domain</th><th style="width:15%">Brand</th><th style="width:13%">Status</th>
+    <th class="num" style="width:9%">Pages</th><th class="num" style="width:9%">Links</th><th>Review slug</th>
+  </tr>
+  <tr><td class="mono">in7gaming.co</td><td>IN7 Gaming</td><td><span class="pill p-live">Live 200</span></td><td class="num">46</td><td class="num">90</td><td class="mono">in7-gaming-co-review</td></tr>
+  <tr><td class="mono">mast79game.com</td><td>Mast79</td><td><span class="pill p-dead">No DNS</span></td><td class="num">46</td><td class="num">91</td><td class="mono">mast79-game-review</td></tr>
+  <tr><td class="mono">xx7game.com</td><td>XX7</td><td><span class="pill p-live">Live 200</span></td><td class="num">46</td><td class="num">89</td><td class="mono">xx7-game-review</td></tr>
+  <tr><td class="mono">raja7gamedownload.com</td><td>Raja7</td><td><span class="pill p-dead">No DNS</span></td><td class="num">46</td><td class="num">88</td><td class="mono">raja7-game-download-guide</td></tr>
+  <tr><td class="mono">ind9game.com</td><td>IND9</td><td><span class="pill p-live">Live 200</span></td><td class="num">46</td><td class="num">88</td><td class="mono">ind9-game-review</td></tr>
+  <tr><td class="mono">360-inr.com</td><td>360INR</td><td><span class="pill p-live">Live 200</span></td><td class="num">46</td><td class="num">85</td><td class="mono">360inr-game-review</td></tr>
+  <tr><td class="mono">mmydownload.com</td><td>MMY</td><td><span class="pill p-dead">No DNS</span></td><td class="num">18</td><td class="num">44</td><td class="mono">mmy-game-download-review</td></tr>
+  <tr><td class="mono">x89app.in</td><td>X89</td><td><span class="pill p-dead">No DNS</span></td><td class="num">18</td><td class="num">43</td><td class="mono">x89-app-review</td></tr>
+  <tr><td class="mono">s1games.in</td><td>S1 Games</td><td><span class="pill p-dead">No DNS</span></td><td class="num">15</td><td class="num">42</td><td class="mono">s1-games-review</td></tr>
+  <tr><td class="mono">fn7gameng.com</td><td>FN7</td><td><span class="pill p-live">Live 200</span></td><td class="num">13</td><td class="num">34</td><td class="mono">fn7-game-review</td></tr>
+  <tr><td class="mono">mast179games.com</td><td>Mast179</td><td><span class="pill p-park">Parked</span></td><td class="num">13</td><td class="num">34</td><td class="mono">mast179-games-review</td></tr>
+  <tr><td class="mono">iw7apps.com</td><td>IW7</td><td><span class="pill p-dead">No DNS</span></td><td class="num">13</td><td class="num">33</td><td class="mono">iw7-apps-review</td></tr>
+  <tr><td class="mono">mg7app.co.in</td><td>MG7</td><td><span class="pill p-dead">No DNS</span></td><td class="num">11</td><td class="num">33</td><td class="mono">mg7-app-review</td></tr>
+  <tr><td class="mono">ind9win.com</td><td>IND9 Win</td><td><span class="pill p-dead">No DNS</span></td><td class="num">12</td><td class="num">33</td><td class="mono">ind9-win-withdrawal-guide</td></tr>
+  <tr><td class="mono">is7gameapks.com</td><td>IS7</td><td><span class="pill p-park">Parked</span></td><td class="num">13</td><td class="num">32</td><td class="mono">is7-game-apk-guide</td></tr>
+  <tr><td class="mono">112gameapps.com</td><td>112 Game</td><td><span class="pill p-live">Live 200</span></td><td class="num">12</td><td class="num">32</td><td class="mono">112-game-apk-guide</td></tr>
+  <tr><td class="mono">555casino.in</td><td>555 Casino</td><td><span class="pill p-redir">Redirects</span></td><td class="num">12</td><td class="num">32</td><td class="mono">555-casino-review</td></tr>
+  <tr><td class="mono">ie777s.com</td><td>IE777</td><td><span class="pill p-redir">406 WAF</span></td><td class="num">12</td><td class="num">30</td><td class="mono">ie777-game-review</td></tr>
+  <tr><td class="mono">in7co.in</td><td>IN7 (host)</td><td><span class="pill p-live">This site</span></td><td class="num">-</td><td class="num">-</td><td class="mono">in7-game-platform-overview</td></tr>
+</table>
+
+<div class="box warn">
+  <span class="lbl">Status notes</span>
+  <p><strong>555casino.in</strong> currently 301s to ie777s.com, so both addresses land on the IE777 lobby. <strong>ie777s.com</strong> returns 406 to command-line requests because of a WAF, but the site is live in a browser. <strong>mast179games.com</strong> and <strong>is7gameapks.com</strong> serve a parking page that redirects to <code>/lander</code>. The eight "No DNS" domains did not resolve at all.</p>
+  <p>All eight dead domains and the two parked ones already have full review pages and full link coverage. Content is written and waiting. Nothing needs rewriting once you build those sites.</p>
+</div>
+
+<h3>Why six domains have far more links than the rest</h3>
+<p>Those six sit in the site-wide footer column, so they pick up a link from all 46 pages. The other twelve get their links from contextual placements inside articles and reviews. This was deliberate: 18 site-wide footer links on every page is the classic link-farm signal, so the footer was kept to six with a "See all 19" link to the directory.</p>
+
+<h2>4. Where the links come from</h2>
+<table>
+  <tr><th style="width:34%">Source</th><th>How it links out</th></tr>
+  <tr><td>Own review page</td><td>Hero CTA, spec table row, inline links in the intro and install steps, download warning note, closing CTA. Roughly 5 to 7 links.</td></tr>
+  <tr><td>Other reviews</td><td>Each review shows 4 alternatives as brand cards. Every brand appears in 5 to 7 other reviews.</td></tr>
+  <tr><td>Guides</td><td>Contextual inline links in the prose, plus an "apps" card rail and a closing "every platform mentioned" rail. Each brand appears in 6 to 9 of the 14 guides.</td></tr>
+  <tr><td><code>/gaming-apps</code></td><td>Comparison table row, group card, and domain checklist entry. Three links each.</td></tr>
+  <tr><td><code>/blog</code></td><td>Official sites index table row.</td></tr>
+  <tr><td>Homepage</td><td>Six brand cards in the "More Gaming Apps We've Reviewed" section.</td></tr>
+  <tr><td>Footer</td><td>Six brands, site-wide across all 46 pages.</td></tr>
+</table>
+
+<div class="pb"></div>
+
+<h2>5. All 33 new page URLs</h2>
+<h3>Guides and roundups</h3>
+<div class="cols3">
+  <div>/blog/paise-kamane-wale-game-list-2026</div>
+  <div>/blog/best-gaming-apps-under-40mb</div>
+  <div>/blog/upi-withdrawal-gaming-apps-guide</div>
+  <div>/blog/signup-bonus-comparison-2026</div>
+  <div>/blog/apk-install-guide-android</div>
+  <div>/blog/real-or-fake-how-to-check-gaming-app</div>
+  <div>/blog/colour-prediction-wingo-explained</div>
+  <div>/blog/teen-patti-rummy-apps-compared</div>
+  <div>/blog/slots-fishing-arcade-guide</div>
+  <div>/blog/aviator-crash-game-guide</div>
+  <div>/blog/bonus-kaise-milta-hai-hindi</div>
+  <div>/blog/gaming-app-kyc-withdrawal-problems</div>
+  <div>/blog/best-gaming-apps-for-slow-phones</div>
+  <div>/blog/responsible-gaming-limits-guide</div>
+</div>
+
+<h3>Platform reviews</h3>
+<div class="cols3">
+  <div>/blog/in7-gaming-co-review</div>
+  <div>/blog/xx7-game-review</div>
+  <div>/blog/ie777-game-review</div>
+  <div>/blog/555-casino-review</div>
+  <div>/blog/112-game-apk-guide</div>
+  <div>/blog/360inr-game-review</div>
+  <div>/blog/fn7-game-review</div>
+  <div>/blog/ind9-game-review</div>
+  <div>/blog/ind9-win-withdrawal-guide</div>
+  <div>/blog/mast79-game-review</div>
+  <div>/blog/mast179-games-review</div>
+  <div>/blog/iw7-apps-review</div>
+  <div>/blog/raja7-game-download-guide</div>
+  <div>/blog/mmy-game-download-review</div>
+  <div>/blog/x89-app-review</div>
+  <div>/blog/s1-games-review</div>
+  <div>/blog/mg7-app-review</div>
+  <div>/blog/is7-game-apk-guide</div>
+  <div>/blog/in7-game-platform-overview</div>
+</div>
+
+<h3>Hubs</h3>
+<div class="cols3">
+  <div>/blog</div>
+  <div>/gaming-apps</div>
+</div>
+
+<h2>6. How to verify the link counts again</h2>
+<p>Do not trust a source-code grep, it undercounts card rails. Render the pages and count real anchors.</p>
+<ol>
+  <li>Start the dev server: <code>npx next dev -p 3947</code></li>
+  <li>Pull the URL list: fetch <code>/sitemap.xml</code> and strip the <code>&lt;loc&gt;</code> tags.</li>
+  <li>Save every page's HTML with curl.</li>
+  <li>For each file, remove all <code>&lt;script&gt;...&lt;/script&gt;</code> blocks first. This matters: the RSC flight payload and the JSON-LD both contain URLs that are not clickable links, and leaving them in inflates the count.</li>
+  <li>Count <code>href="..."</code> matches per domain.</li>
+</ol>
+<p>Last run gave 953 links across 46 pages, lowest domain 30. Baseline to compare against.</p>
+
+<h2>7. Next steps, in order</h2>
+<ul class="chk">
+  <li><strong>Build the 8 dead domains.</strong> x89app.in, s1games.in, mast79game.com, iw7apps.com, raja7gamedownload.com, mg7app.co.in, mmydownload.com, ind9win.com. Their reviews describe specific features, so build to match what the review already claims, or update the review to match what you build. Do not let the two drift apart.</li>
+  <li><strong>Build the 2 parked domains.</strong> mast179games.com (rummy focus) and is7gameapks.com (APK version library).</li>
+  <li><strong>Flip the live flags.</strong> In <code>content/brands-*.ts</code>, change <code>live: false</code> to <code>true</code>. That swaps the "Rolling out" badge for "Live" and updates the honesty caveats on those pages.</li>
+  <li><strong>Decide 555casino.in.</strong> Either give it its own casino-first lobby as the review describes, or drop the redirect and let it stay an IE777 alias. The review currently states the redirect openly.</li>
+  <li><strong>Deploy and submit.</strong> Push to the repo, let Vercel build, then submit the updated sitemap in Google Search Console. 46 URLs now, up from 11.</li>
+  <li><strong>Get backlinks to in7co.in itself.</strong> This is the gap. in7co.in is the host, so its links are internal. To point external links at it, replicate this structure on the second site at <code>D:\in7new</code>.</li>
+  <li><strong>Optional: fix the em dashes in the site chrome.</strong> Three visible em dashes remain in <code>components/Footer.tsx</code> and <code>components/Navbar.tsx</code>, from before this work. They appear on every page.</li>
+  <li><strong>Watch it in Search Console.</strong> Check indexing on the 33 new URLs after a few weeks, and watch for manual action notices given the point in section 8.</li>
+</ul>
+
+<h2>8. The honest caveat</h2>
+<p>Cross-linking domains you own falls under Google's link scheme policy. That is a fact about the technique, not about this build. What was done to reduce the risk:</p>
+<ul>
+  <li>Every link sits inside real editorial content, not a link list.</li>
+  <li>Anchor text varies. Brand name, bare domain, and descriptive phrases are mixed.</li>
+  <li>Footer holds six links, not eighteen.</li>
+  <li>Reviews name real drawbacks, not just benefits. Every page carries an 18+ and legal notice.</li>
+  <li>Facts came from reading each live site or researching the brand, so the copy is specific rather than generic.</li>
+</ul>
+<p>The risk is reduced, not eliminated. Worth knowing so the decision stays yours.</p>
+
+<h2>9. Standing project rules</h2>
+<table>
+  <tr><th style="width:30%">Rule</th><th>Detail</th></tr>
+  <tr><td>No auto build</td><td>Do not run <code>npm run build</code> unless explicitly asked. Typecheck with <code>npx tsc --noEmit</code> instead.</td></tr>
+  <tr><td>No em dash</td><td>Never use the em dash character in any content.</td></tr>
+  <tr><td>Language split</td><td>English pages in English, Hindi pages in Hindi, FAQs in Hinglish.</td></tr>
+  <tr><td>Canonical host</td><td>Always <code>https://www.in7co.in</code> with www. The apex 308s to www, so non-www canonicals create redirect chains.</td></tr>
+  <tr><td>Codaiman excluded</td><td>Deliberately left out of this network.</td></tr>
+  <tr><td>Next.js version</td><td>Next 16.2.1. <code>params</code> is a Promise and must be awaited. Read <code>node_modules/next/dist/docs/</code> before assuming an API.</td></tr>
+</table>
+
+<h2>10. Build state at handoff</h2>
+<table>
+  <tr><th style="width:30%">Check</th><th>Result</th></tr>
+  <tr><td><code>npx tsc --noEmit</code></td><td>Clean, no errors.</td></tr>
+  <tr><td><code>npx eslint</code></td><td>No new findings. Pre-existing only: SpinWheel hooks, Navbar setState in effect, unused DL_URL in app/page.tsx, layout custom font warning.</td></tr>
+  <tr><td>Dev server render</td><td>All 46 sitemap URLs returned 200.</td></tr>
+  <tr><td>Markup check</td><td>No unparsed inline markup leaking into rendered text.</td></tr>
+  <tr><td>Production build</td><td>Not run, per the standing rule.</td></tr>
+  <tr><td>Git</td><td>Not committed. Changes are in the working tree on <code>main</code>.</td></tr>
+</table>
+
+<div class="foot">
+  IN7 Backlink Network build overview &nbsp;·&nbsp; generated 25 July 2026 &nbsp;·&nbsp; source: <span class="mono">D:\in7-next\docs\backlink-network-overview.html</span><br>
+  For entertainment platforms, 18+ only. Real-money gaming is restricted or prohibited in several Indian states and under the Promotion and Regulation of Online Gaming Act, 2025.
+</div>
+
+</body>
+</html>

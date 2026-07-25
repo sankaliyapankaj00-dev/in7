@@ -10,7 +10,10 @@ const links = [
   { href: '/in7-game-download', label: 'Download' },
   { href: '/in7-game-app', label: 'App' },
   { href: '/how-to-register', label: 'Register' },
-  { href: '/about-us', label: 'About' },
+  { href: '/gaming-apps', label: 'All Apps' },
+  { href: '/tools', label: 'Tools' },
+  { href: '/tech', label: 'Tech' },
+  { href: '/blog', label: 'Blog' },
 ];
 
 export default function Navbar() {
@@ -72,7 +75,7 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           {isDesktop && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
               {links.map(l => (
                 <Link
                   key={l.href}
