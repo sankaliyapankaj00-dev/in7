@@ -1,12 +1,11 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { X, Download, Gift, Clock, Zap } from 'lucide-react';
+import { X, Download, Gift } from 'lucide-react';
 
-const DL_URL = "https://share.in7game.org/share/agent/SA6YDBPC?data=eyJtIjoxLCJsYW5nIjoiaGkiLCJpZCI6MX0=";
+const DL_URL = "https://share.in7game.org/share/agent/SD67PUG4?data=eyJtIjoxLCJsYW5nIjoiZW4iLCJpZCI6MX0=";
 
 export default function PopupModal() {
   const [isOpen, setIsOpen] = useState(false);
-  const [countdown, setCountdown] = useState(59);
 
   useEffect(() => {
     // Only show once per browser tab session
@@ -14,12 +13,6 @@ export default function PopupModal() {
     const timer = setTimeout(() => setIsOpen(true), 10000);
     return () => clearTimeout(timer);
   }, []);
-
-  useEffect(() => {
-    if (!isOpen || countdown <= 0) return;
-    const interval = setInterval(() => setCountdown(c => c - 1), 1000);
-    return () => clearInterval(interval);
-  }, [isOpen, countdown]);
 
   if (!isOpen) return null;
 
@@ -57,16 +50,6 @@ export default function PopupModal() {
           <Download size={20} strokeWidth={2.5} />
           Download IN7 Now
         </a>
-
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', marginBottom: '8px'}}>
-          <Clock size={13} />
-          <span>Offer expires in: 00:{countdown.toString().padStart(2, '0')}</span>
-        </div>
-
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px', color: '#e63946', fontSize: '0.75rem'}}>
-          <Zap size={12} fill="#e63946" />
-          <span>Limited time offer for new users</span>
-        </div>
       </div>
     </div>
   );

@@ -87,7 +87,7 @@ export const tech1: TechArticle[] = [
       ] },
       { t: 'h2', text: 'INP: how long until the page responds to a tap' },
       { t: 'p', text: 'Interaction to Next Paint replaced First Input Delay and measures something more honest: across the whole visit, how long does the page take to visibly respond when the user interacts. A page can load fast and still fail this badly.' },
-      { t: 'p', text: 'The cause is almost always JavaScript occupying the main thread. Too much of it, running for too long, in one uninterrupted block. Splitting long tasks and deferring work that does not need to happen during load is the fix.' },
+      { t: 'p', text: 'Almost always it\'s JavaScript hogging the main thread: too much of it, running for too long, in one uninterrupted block. Splitting long tasks and deferring work that does not need to happen during load is the fix.' },
       { t: 'h2', text: 'CLS: how much the page moves while you read it' },
       { t: 'p', text: 'Cumulative Layout Shift measures unexpected movement. Everyone has experienced this: you go to tap a link, an ad or an image finishes loading above it, everything jumps, and you tap the wrong thing.' },
       { t: 'p', text: 'The fix is genuinely simple and widely skipped: **reserve space for anything that loads late.** Width and height attributes on images. Fixed dimensions for ad slots and embeds. Never insert content above existing content after load.' },

@@ -15,7 +15,7 @@ export const tech3: TechArticle[] = [
     targets: ['cws', 'home'],
     blocks: [
       { t: 'p', text: 'The choice is usually framed as courses versus mentorship, as though you pick one. That framing is wrong, because they solve different problems and the useful question is what order to use them in.' },
-      { t: 'h2', text: 'What a course is genuinely good at' },
+      { t: 'h2', text: 'Where a course earns its keep' },
       { t: 'p', text: 'Coverage and sequence. A good course knows what you need to learn and in what order, which is something a beginner cannot know by definition. Left to yourself you will learn things in a random order and discover gaps months later.' },
       { t: 'p', text: 'Courses are also cheap, repeatable and available at 2am. Those are real advantages, not consolation prizes.' },
       { t: 'h2', text: 'What a course cannot do' },
@@ -179,7 +179,7 @@ export const tech3: TechArticle[] = [
     blocks: [
       { t: 'p', text: 'Everyone has been trapped in a bad chatbot: it does not understand the question, offers four options none of which apply, and provides no route to a human. That experience is why customers are hostile to chatbots before yours has said anything.' },
       { t: 'p', text: 'The technology is not the problem. Modern language models handle open-ended questions well. Bad implementations are design failures, and they are avoidable.' },
-      { t: 'h2', text: 'What a chatbot genuinely handles well' },
+      { t: 'h2', text: 'What a chatbot is actually good for' },
       { t: 'ul', items: [
         '**Repetitive factual questions.** Opening hours, order status, return policy, document requirements. These are most of the volume in most businesses.',
         '**Routing.** Working out which team a query belongs to and getting it there with context attached.',
@@ -282,7 +282,7 @@ export const tech3: TechArticle[] = [
     keywords: ['ai website builder', 'ai vs custom development', 'website builder comparison', 'ai generated website'],
     targets: ['builder', 'web', 'uiux', 'projects', 'home'],
     blocks: [
-      { t: 'p', text: 'AI website builders are usually discussed as either the end of web development or a toy. Neither is right. They are genuinely fast and genuinely good at a specific class of website, and that class has clear boundaries worth knowing before you choose.' },
+      { t: 'p', text: 'AI website builders are usually discussed as either the end of web development or a toy. Neither is right. They are fast and legitimately good at a specific class of website, and that class has clear boundaries worth knowing before you choose.' },
       { t: 'h2', text: 'What AI generation is actually good at' },
       { t: 'p', text: 'Sites where the structure is well understood and the content is descriptive. A service business needing five pages that explain what it does, look professional, load fast and rank for its own name. That is a solved shape, and generating it in minutes instead of days is a real saving, not a compromise.' },
       { t: 'ul', items: [

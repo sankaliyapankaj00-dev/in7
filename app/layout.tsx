@@ -3,9 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PopupModal from "@/components/PopupModal";
-import NotificationsWidget from "@/components/NotificationsWidget";
 import ChatWidget from "@/components/ChatWidget";
-import SpinWheel from "@/components/SpinWheel";
 import MobileStickyBar from "@/components/MobileStickyBar";
 
 export const metadata: Metadata = {
@@ -36,12 +34,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body style={{background: '#0a0a0f', color: '#fff', paddingTop: '64px'}}>
         <Navbar />
-        <NotificationsWidget />
         <main>{children}</main>
         <Footer />
         <PopupModal />
         <ChatWidget />
-        <SpinWheel />
         <MobileStickyBar />
         {/* Global JSON-LD — WebSite + Organization */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([

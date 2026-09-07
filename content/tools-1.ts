@@ -11,11 +11,11 @@ export const tools1: Tool[] = [
     description: 'Combine multiple PDF files into one document in your browser. Page order, bookmarks, file size limits and the mistakes that corrupt a merged PDF.',
     excerpt: 'Combine several PDFs into one, control the page order, and avoid the two mistakes that produce a broken output file.',
     what: [
-      'Merging PDFs is the single most common document task people go looking for a tool for, usually because they need to send one file instead of six: a scanned ID, a signed form and three supporting pages that a portal will only accept as a single upload.',
-      'The browser-based approach is genuinely the right one here. A merge does not re-encode anything, it rewrites the document structure and copies the existing page objects across, so there is no quality loss and no reason to install desktop software for it. [ToolHub](https://codaiman.com/toolhub) runs the merge in the browser, which also means the files are not sitting on someone else\'s server afterwards.',
+      'People usually end up needing this because a portal will only take one upload: a scanned ID, a signed form, three supporting pages, all wanted as a single file instead of six separate attachments.',
+      'The good part is that merging does not touch the actual content. It rewrites the document structure and copies the existing page objects across, so nothing gets re-encoded and nothing loses quality in the process. Run it through [ToolHub](https://codaiman.com/toolhub) and it all happens in your browser tab, so the files are not sitting on someone else\'s server once you are done.',
     ],
     steps: [
-      'Open the PDF merge tool in [ToolHub](https://codaiman.com/toolhub).',
+      'Head to the PDF merge tool on [ToolHub](https://codaiman.com/toolhub).',
       'Add every file you want in the output. Do not add them one at a time and merge repeatedly, that nests the structure and bloats the file.',
       'Drag the thumbnails into the order you actually want. The tool follows your order, not the order you uploaded in.',
       'Check the total page count before you export. A page count that does not match the sum of your inputs means one file failed to parse.',
@@ -52,11 +52,11 @@ export const tools1: Tool[] = [
     description: 'Split a PDF in the browser: pull out one page, extract a range, or break a document into individual files. Page numbering traps explained.',
     excerpt: 'Pull out a single page, a range, or break a document apart entirely. Plus the off-by-one trap that catches almost everyone.',
     what: [
-      'Splitting is the reverse of merging and it comes up for a narrower reason: you have a 60-page document and someone needs pages 12 to 14. Sending all 60 is lazy and sometimes a privacy problem, since the other 57 pages may contain things the recipient has no business seeing.',
-      'Like merging, splitting copies page objects rather than re-encoding them, so the extracted pages are pixel-identical to the source. The tool lives in the [ToolHub](https://codaiman.com/toolhub) PDF section alongside merge and compress.',
+      'This is the mirror image of merging, and the reason people reach for it is usually narrower: a 60-page document, but the other person only needs pages 12 to 14. Sending the whole thing is lazy, and sometimes a privacy problem too, since the other 57 pages might have things the recipient has no business seeing.',
+      'Under the hood it works the same way merging does: page objects get copied, not re-encoded, so what comes out the other end is pixel-identical to the source. You will find it in [ToolHub](https://codaiman.com/toolhub)\'s PDF section, right next to merge and compress.',
     ],
     steps: [
-      'Open the PDF split tool in [ToolHub](https://codaiman.com/toolhub) and load your file.',
+      'Load your file into the PDF split tool on [ToolHub](https://codaiman.com/toolhub).',
       'Decide which mode you need: extract a range, extract specific pages, or split every page into its own file.',
       'Enter the range using the page numbers shown in the viewer, not the numbers printed on the pages. Those often differ because of cover pages.',
       'Preview the selection. Most split failures are actually correct splits of the wrong range.',
@@ -94,10 +94,10 @@ export const tools1: Tool[] = [
     excerpt: 'Compression targets images, not text. That one fact explains why some PDFs shrink 90 percent and others barely move.',
     what: [
       'Here is the thing almost no compression tool explains: PDF compression mostly works on the images inside the document. Text is already stored efficiently and there is very little to squeeze out of it. So a 40-page text report might shrink by 5 percent, while a 3-page scanned document can drop by 90 percent.',
-      'That single fact tells you whether compression will help before you try it. If your file is large and mostly text, something else is wrong, usually an embedded font set or a huge vector graphic. If it is large because it contains scans or photos, compression will work well. The [ToolHub](https://codaiman.com/toolhub) compressor lets you pick a quality level rather than guessing at a single preset.',
+      'That single fact tells you whether compression will help before you even try it. If your file is large and mostly text, something else is going on, usually an embedded font set or a heavy vector graphic. If it is large because of scans or photos, compression will earn its keep. [ToolHub](https://codaiman.com/toolhub)\'s compressor gives you a quality slider instead of forcing one fixed preset on you, which matters a lot here.',
     ],
     steps: [
-      'Open the PDF compressor in [ToolHub](https://codaiman.com/toolhub).',
+      'Pull up the PDF compressor on [ToolHub](https://codaiman.com/toolhub).',
       'Note your target size first. Portal limits are usually 2 MB, 5 MB or 10 MB, and knowing the number stops you over-compressing.',
       'Start with the medium quality setting rather than maximum compression.',
       'Check the output at 100 percent zoom, specifically any small text inside images. That is where over-compression shows first.',
@@ -135,12 +135,12 @@ export const tools1: Tool[] = [
     excerpt: 'Some PDFs convert perfectly and some come out as garbage. The difference is whether the text is real text or a picture of text.',
     what: [
       'PDF to Word conversion has a reputation for producing a mess, and the reason is structural. PDF describes where marks sit on a page. Word describes a flow of paragraphs. Converting between them means guessing which marks form a paragraph, which form a table, and which are a header. Good converters guess well. Nothing guesses perfectly.',
-      'The bigger split is whether your PDF contains real text or scanned images. A PDF exported from Word converts back very cleanly. A scan of a printed page contains no text at all, only pixels, so it needs OCR before there is anything to convert. Both paths are in the [ToolHub](https://codaiman.com/toolhub) document section.',
+      'The bigger split is whether your PDF actually contains text or is just a picture of text. A PDF exported straight from Word converts back cleanly, almost every time. A scan of a printed page has no text in it at all, only pixels, so it needs OCR before there is anything to convert. Both routes live in [ToolHub](https://codaiman.com/toolhub)\'s document tools.',
     ],
     steps: [
       'Test first: open the PDF and try to select a sentence with your cursor. If it highlights, you have real text and conversion will work well.',
       'If nothing highlights, it is a scan. Use OCR first, then convert.',
-      'Open the PDF to Word converter in [ToolHub](https://codaiman.com/toolhub) and upload.',
+      'Then upload the file to the PDF to Word converter on [ToolHub](https://codaiman.com/toolhub).',
       'Open the result in Word and check tables first. Tables are what break most often.',
       'Fix headings and spacing manually. Expect to spend a few minutes on any document with a complex layout.',
     ],
@@ -176,11 +176,11 @@ export const tools1: Tool[] = [
     excerpt: 'This direction is the easy one. Here is why, plus the one thing that still goes wrong: fonts.',
     what: [
       'Word to PDF is the reliable direction. You are going from a flexible format to a fixed one, which means the converter only has to decide where things sit and then freeze them. No guessing required. This is exactly why PDF exists: so a document looks the same everywhere.',
-      'The one thing that still goes wrong is fonts. If your document uses a font the converter does not have, it substitutes something similar and your line breaks shift. Embedding fonts prevents this, and it is the difference between a PDF that looks right on your machine and one that looks right on everyone\'s. The converter sits in the [ToolHub](https://codaiman.com/toolhub) document tools.',
+      'The one thing that still trips people up is fonts. If your document uses a font the converter does not have, it swaps in something similar and your line breaks shift as a result. Embedding fonts prevents that, and it is the whole difference between a PDF that looks right only on your machine and one that looks right on everyone\'s. Grab the converter from [ToolHub](https://codaiman.com/toolhub)\'s document tools when you need it.',
     ],
     steps: [
       'Finalise the document in Word first. Editing after conversion means converting again.',
-      'Open the Word to PDF converter in [ToolHub](https://codaiman.com/toolhub) and upload your DOCX.',
+      'Upload your DOCX to the Word to PDF converter on [ToolHub](https://codaiman.com/toolhub).',
       'Convert, then open the PDF and compare page breaks against the original.',
       'If line breaks moved, a font was substituted. Switch to a common font or embed the one you are using.',
       'Check that hyperlinks still work. They usually survive, but headers and footers sometimes lose them.',
@@ -217,11 +217,11 @@ export const tools1: Tool[] = [
     excerpt: 'The whole job comes down to one setting: DPI. Pick it wrong and your text is unreadable or your file is enormous.',
     what: [
       'Converting PDF pages to images is what you do when the destination cannot handle a PDF: a social post, a WhatsApp message, a slide, or a form field that only accepts images. It is a one-way trip, because you are turning structured text into pixels.',
-      'The only setting that really matters is resolution. At 72 DPI a page is small and the text is fuzzy. At 300 DPI it is crisp and the file is large. For screen viewing 150 DPI is usually the sweet spot; for anything that will be printed or zoomed, go to 300. [ToolHub](https://codaiman.com/toolhub) exposes the DPI choice rather than hiding it behind a single preset, which is the difference between a usable tool and a frustrating one.',
+      'The only setting that really matters is resolution. At 72 DPI a page comes out small with fuzzy text. At 300 DPI it is crisp, but the file is big. For screen viewing, 150 DPI is usually the sweet spot; for anything that will be printed or zoomed into, go to 300. [ToolHub](https://codaiman.com/toolhub)\'s converter puts that DPI choice right in front of you instead of burying it behind one fixed preset, and that is the difference between a usable tool and a frustrating one.',
     ],
     steps: [
       'Decide where the image is going. Screen viewing needs less resolution than print.',
-      'Open the PDF to JPG tool in [ToolHub](https://codaiman.com/toolhub).',
+      'Then open the PDF to JPG tool on [ToolHub](https://codaiman.com/toolhub).',
       'Set DPI: 150 for screen, 300 for print or anything that will be zoomed.',
       'Pick JPG for photos and scans, PNG if the page is mostly text and sharp lines.',
       'Export, then check the smallest text on the page at 100 percent zoom.',
@@ -258,11 +258,11 @@ export const tools1: Tool[] = [
     excerpt: 'Mostly used for phone-camera document scans. Here is how to stop them coming out crooked, huge and unreadable.',
     what: [
       'The overwhelmingly common use for this is photographing documents with a phone and needing them as a single PDF, because almost every official portal in India accepts PDF and rejects a folder of JPGs.',
-      'The conversion itself is trivial. The quality of the result is almost entirely decided before you convert, by how you took the photos. Flat, evenly lit, shot straight on, and cropped to the page edges beats any amount of post-processing. The converter is in the [ToolHub](https://codaiman.com/toolhub) PDF section, and it lets you set page size and order rather than assuming.',
+      'The conversion itself is trivial, honestly. What decides the quality of the result happens before you even convert, in how the photos were taken. Flat, evenly lit, shot straight on, cropped to the page edges — that beats any amount of post-processing you could do afterwards. You will find the converter in [ToolHub](https://codaiman.com/toolhub)\'s PDF section, where you set page size and order yourself instead of the tool guessing for you.',
     ],
     steps: [
       'Crop each image to the document edges before you start. This alone fixes most complaints about the output.',
-      'Open the JPG to PDF tool in [ToolHub](https://codaiman.com/toolhub) and add all images at once.',
+      'Then add all your images at once to the JPG to PDF tool on [ToolHub](https://codaiman.com/toolhub).',
       'Set the order. The tool follows your arrangement, not the filename order.',
       'Choose A4 page size unless you have a specific reason not to. Portals expect it.',
       'Export, then check the file size against whatever limit you need to meet.',
@@ -298,11 +298,11 @@ export const tools1: Tool[] = [
     description: 'Rotate PDF pages in the browser and save the rotation permanently. Why viewer rotation does not stick and how to fix single pages.',
     excerpt: 'Rotating in your PDF viewer does not save. Here is the difference between viewing rotated and being rotated.',
     what: [
-      'This is a small task with one genuinely confusing part. Rotating a page in a PDF viewer usually only changes how you are looking at it. Close the file, reopen it, and the page is sideways again. Everyone hits this at least once and concludes the tool is broken.',
-      'Rotating properly writes the rotation into the document, so it stays that way for whoever opens it next. That distinction matters most when a scanner produced a document where some pages are upright and others are on their side, which is the usual reason anyone needs this. [ToolHub](https://codaiman.com/toolhub) writes the rotation into the file rather than just changing the view.',
+      'Small task, but one genuinely confusing part trips almost everyone up: rotating a page in a PDF viewer usually only changes how you are looking at it. Close the file, reopen it, and the page is sideways again. Nearly everyone hits this once and assumes the tool is broken.',
+      'Doing it properly writes the rotation into the document itself, so it stays fixed for whoever opens it next. That distinction matters most when a scanner has produced a document where some pages are upright and others sideways, which is the usual reason anyone lands here. Run it through [ToolHub](https://codaiman.com/toolhub) and the rotation gets written into the file, not just how you happen to be viewing it.',
     ],
     steps: [
-      'Open the PDF rotate tool in [ToolHub](https://codaiman.com/toolhub) and load the file.',
+      'Load the file into the PDF rotate tool on [ToolHub](https://codaiman.com/toolhub).',
       'Look at the page thumbnails and identify which pages are actually wrong. Often it is only some of them.',
       'Rotate individual pages rather than the whole document, unless every page needs it.',
       'Export the file. This is the step that makes the rotation permanent.',
@@ -340,12 +340,12 @@ export const tools1: Tool[] = [
     excerpt: 'There are two kinds of PDF lock and they are not the same thing. One you can clear, the other needs the password.',
     what: [
       'PDF protection comes in two forms and confusing them causes most of the frustration here. A **user password** is required to open the file at all: without it there is nothing to work with, and no legitimate tool will get you in. An **owner password** lets anyone open and read the file but blocks printing, copying or editing.',
-      'Owner restrictions are the ones people usually need cleared: a bank statement you cannot print, a form you cannot fill, a document you cannot copy a reference number out of. Clearing those on a document you are entitled to use is reasonable and routine. The tool sits in [ToolHub](https://codaiman.com/toolhub).',
+      'Owner restrictions are the ones people usually need cleared: a bank statement you cannot print, a form you cannot fill in, a document you cannot even copy a reference number out of. Clearing those on a document you are already entitled to use is reasonable, routine stuff. You will find the tool over in [ToolHub](https://codaiman.com/toolhub).',
     ],
     steps: [
       'Check which kind of lock you have. If the file opens without asking for anything, it is an owner restriction.',
       'If it demands a password to open, you need that password. There is no way around that, and that is by design.',
-      'Open the PDF unlock tool in [ToolHub](https://codaiman.com/toolhub) and upload the file.',
+      'Upload the file to the PDF unlock tool on [ToolHub](https://codaiman.com/toolhub).',
       'Remove the restrictions and export a clean copy.',
       'Test what you actually needed: try printing, or copying a line of text.',
     ],
@@ -381,11 +381,11 @@ export const tools1: Tool[] = [
     excerpt: 'For documents assembled from several sources, where no single file knows what page it is on.',
     what: [
       'This comes up almost exclusively with assembled documents: a submission built from a form, three annexures and a set of scans, where the pieces came from different places and none of them knows what page it sits on in the final document. Legal filings, tender submissions and academic appendices are the usual suspects.',
-      'The useful options are position, starting number, and whether to skip the first page. Skipping the cover matters more than it sounds, because a numbered cover page looks wrong on anything formal and reviewers notice. [ToolHub](https://codaiman.com/toolhub) covers all three.',
+      'The options worth caring about are position, starting number, and whether to skip the first page. Skipping the cover matters more than it sounds, since a numbered cover page looks wrong on anything formal, and reviewers do notice. [ToolHub](https://codaiman.com/toolhub)\'s numbering tool covers all three, so you are not stuck with whatever it defaults to.',
     ],
     steps: [
       'Finish assembling the document first. Adding numbers before a merge means renumbering afterwards.',
-      'Open the page numbering tool in [ToolHub](https://codaiman.com/toolhub).',
+      'Then open the page numbering tool on [ToolHub](https://codaiman.com/toolhub).',
       'Choose the position. Bottom centre is the safe default; bottom right suits documents that will be bound on the left.',
       'Set the starting number and whether to skip the cover page.',
       'Export and check the first, last and one middle page.',
@@ -421,11 +421,11 @@ export const tools1: Tool[] = [
     description: 'Compress JPG and PNG images in the browser. Quality thresholds, what compression artifacts look like, and why this matters for site speed.',
     excerpt: 'Most images can lose 60 to 70 percent of their size with no visible difference. Here is where the line actually is.',
     what: [
-      'Image compression is the highest-leverage small task on this list. A typical phone photo is 4 to 8 MB and looks identical at under 1 MB. That is not a marginal saving, it is the difference between a web page that loads in one second and one that takes six, and between an upload that works and one that times out.',
-      'The practical threshold: JPG quality around 80 percent is almost always visually indistinguishable from the original. Below 60 percent, artifacts start showing in smooth gradients like skies and skin tones. [ToolHub](https://codaiman.com/toolhub) lets you set the level and see the result rather than applying a hidden preset.',
+      'Of everything on this list, this is the highest-leverage small task there is. A typical phone photo is 4 to 8 MB and looks identical at under 1 MB. That is not a marginal saving. It is the difference between a page that loads in one second and one that takes six, and between an upload that works and one that times out halfway through.',
+      'The practical threshold to remember: JPG quality around 80 percent is almost always visually indistinguishable from the original. Drop below 60 percent and artifacts start showing up in smooth gradients, skies and skin tones especially. [ToolHub](https://codaiman.com/toolhub)\'s compressor lets you dial in the level and see exactly what you are getting, rather than applying some hidden preset behind the scenes.',
     ],
     steps: [
-      'Open the image compressor in [ToolHub](https://codaiman.com/toolhub).',
+      'Fire up the image compressor on [ToolHub](https://codaiman.com/toolhub).',
       'Start at 80 percent quality. This is the sweet spot for almost every photo.',
       'Compare against the original at 100 percent zoom, looking at smooth areas rather than detailed ones. Artifacts appear in gradients first.',
       'Resize as well as compress if the image is larger than it will ever be displayed. A 4000 pixel wide photo in a 800 pixel slot is wasting 80 percent of its bytes.',
@@ -463,11 +463,11 @@ export const tools1: Tool[] = [
     excerpt: 'Resizing down is free and lossless in perceived quality. Resizing up cannot invent detail. Know which you are doing.',
     what: [
       'Resizing and compressing get confused constantly, and they are different operations. Compression keeps the dimensions and reduces the data used to describe them. Resizing changes the dimensions. For web images you almost always want both, in that order: resize to the size it will display at, then compress.',
-      'The asymmetry worth knowing: making an image smaller is essentially free, because you are discarding data you did not need. Making it larger cannot work well, because the detail was never captured. Upscaling a 300 pixel logo to 1200 pixels gives you a blurry 1200 pixel logo. [ToolHub](https://codaiman.com/toolhub) keeps aspect ratio locked by default, which prevents the most common mistake.',
+      'Here is the asymmetry worth knowing: shrinking an image is essentially free, because you are just discarding data you never needed anyway. Making it bigger cannot work as well, because the detail was never there to begin with. Upscale a 300 pixel logo to 1200 pixels and all you get is a blurry 1200 pixel logo. [ToolHub](https://codaiman.com/toolhub) locks the aspect ratio by default for exactly this reason, so you would have to go out of your way to stretch something.',
     ],
     steps: [
       'Find the dimensions you actually need. Check the platform requirement rather than guessing.',
-      'Open the image resizer in [ToolHub](https://codaiman.com/toolhub).',
+      'Open up the image resizer on [ToolHub](https://codaiman.com/toolhub).',
       'Keep aspect ratio locked unless you specifically want to crop. Unlocking it stretches faces and text.',
       'Enter the target width. Height follows automatically.',
       'Compress afterwards for a second saving on top of the resize.',
@@ -504,10 +504,10 @@ export const tools1: Tool[] = [
     excerpt: 'WebP beats JPG and PNG at the same visual quality. Support is no longer the issue it was, but there are still two cases to avoid it.',
     what: [
       'WebP is the format that should be your default for web images now. At the same visual quality it is typically 25 to 35 percent smaller than JPG, and considerably smaller than PNG for anything photographic. It also supports transparency, which historically forced people into PNG and its much larger files.',
-      'Browser support stopped being a real objection years ago. Two cases still argue for keeping the original: images that users will download and open in older desktop software, and images going into print workflows, where JPG or TIFF remains expected. For everything on a web page, WebP is the better choice, and the converter is in [ToolHub](https://codaiman.com/toolhub).',
+      'Browser support stopped being a real objection years ago. Two cases still make a case for keeping the original: images users will download and open in older desktop software, and images headed into print workflows, where JPG or TIFF is still what is expected. For everything that lives on a web page, WebP wins, and you will find the converter in [ToolHub](https://codaiman.com/toolhub).',
     ],
     steps: [
-      'Open the WebP converter in [ToolHub](https://codaiman.com/toolhub) and add your images.',
+      'Add your images to the WebP converter on [ToolHub](https://codaiman.com/toolhub).',
       'Set quality around 80 percent. WebP holds up better than JPG at the same number.',
       'Convert, then compare the file sizes. The saving over JPG should be visible immediately.',
       'Check any image that had transparency. WebP keeps it, but confirm rather than assume.',
@@ -545,11 +545,11 @@ export const tools1: Tool[] = [
     excerpt: 'A PNG photo converted to JPG can lose 80 percent of its size. A PNG logo converted to JPG just looks worse.',
     what: [
       'PNG and JPG are built for different content and using the wrong one is the most common image mistake there is. PNG is lossless and holds sharp edges perfectly, which makes it right for logos, screenshots, diagrams and anything with text. JPG is lossy and excellent at photographs, where the eye does not notice the discarded data.',
-      'So converting a photograph from PNG to JPG is a large win, often 80 percent smaller with no visible difference. Converting a logo or a screenshot to JPG is a mistake, because JPG puts visible noise around sharp edges. The other thing to know: **JPG has no transparency.** Anything transparent becomes a solid colour, usually white or black. The converter is in [ToolHub](https://codaiman.com/toolhub).',
+      'Convert a photograph from PNG to JPG and you get a real win, often 80 percent smaller with no visible difference. Convert a logo or a screenshot to JPG and you have made a mistake, because JPG puts visible noise around sharp edges. One more thing worth knowing: **JPG has no transparency.** Anything transparent turns into a solid colour, usually white or black. The converter lives in [ToolHub](https://codaiman.com/toolhub) when you need it.',
     ],
     steps: [
       'Look at the image and decide what it is. Photograph, or graphic with sharp edges and text?',
-      'If it is a photograph, open the PNG to JPG converter in [ToolHub](https://codaiman.com/toolhub).',
+      'If it is a photograph, head to the PNG to JPG converter on [ToolHub](https://codaiman.com/toolhub).',
       'Check whether it has transparency. If it does, decide what background colour you want, because you are getting one.',
       'Convert at around 85 percent quality and compare the file sizes.',
       'If it is a logo, screenshot or diagram, stop. Keep the PNG, or convert to WebP instead.',
@@ -585,12 +585,12 @@ export const tools1: Tool[] = [
     description: 'Crop images in the browser to exact aspect ratios. Platform requirements, why centre-cropping cuts heads off, and cropping before resizing.',
     excerpt: 'Cropping is how you hit a required aspect ratio without stretching. Here are the ratios that actually matter.',
     what: [
-      'Cropping and resizing solve different problems and are often needed together. Resizing changes how big an image is. Cropping changes what is in it, and therefore its aspect ratio. When a platform demands a square image and yours is a wide photo, cropping is the only correct answer. Stretching it is not.',
-      'The reason to crop deliberately rather than let a platform do it: automatic crops take the centre, and the subject of a photograph is very often not in the centre. That is why profile pictures end up cropped through someone\'s forehead. [ToolHub](https://codaiman.com/toolhub) gives you ratio presets plus manual control, so you choose what stays.',
+      'Cropping and resizing get lumped together but solve different problems, and you often need both. Resizing changes how big an image is. Cropping changes what is actually in the frame, and with it, the aspect ratio. When a platform demands a square image and yours is a wide photo, cropping is the only correct answer. Stretching it is not, no matter how tempting the shortcut looks.',
+      'Better to crop it yourself than let a platform do it automatically, because automatic crops take the centre, and a photo\'s subject is very often not sitting dead centre. That is exactly why profile pictures end up cropped through someone\'s forehead. [ToolHub](https://codaiman.com/toolhub) gives you ratio presets plus manual control, so you decide what stays in frame.',
     ],
     steps: [
       'Find the required aspect ratio. Square, 4:5, 16:9 and 1.91:1 cover most platforms.',
-      'Open the crop tool in [ToolHub](https://codaiman.com/toolhub).',
+      'Then open the crop tool on [ToolHub](https://codaiman.com/toolhub).',
       'Select the ratio preset first, then position the frame. Doing it the other way round means redoing it.',
       'Position around the subject, not the centre of the image.',
       'Crop first, then resize, then compress. That order avoids compounding quality loss.',
@@ -627,12 +627,12 @@ export const tools1: Tool[] = [
     excerpt: 'OCR accuracy depends almost entirely on the input image. Here is what to fix before you blame the tool.',
     what: [
       'OCR reads text out of pixels. It is what turns a photographed page into something you can search, copy and edit, and it is the missing step whenever a PDF to Word conversion produces nothing but images.',
-      'Accuracy is decided by the input far more than by the software. Straight, evenly lit, in-focus, high-contrast text reads almost perfectly. Skewed, shadowed, low-contrast or handwritten text does not. Handwriting in particular is a different and much harder problem, and general OCR handles it poorly regardless of what any tool claims. The OCR tool is in the [ToolHub](https://codaiman.com/toolhub) image section.',
+      'Accuracy is decided by the input far more than by the software behind it. Straight, evenly lit, in-focus, high-contrast text reads almost perfectly. Skewed, shadowed, low-contrast or handwritten text does not, and there is not much a tool can do about that. Handwriting especially is a different and much harder problem, and general OCR handles it poorly no matter what any tool claims. You will find the OCR tool tucked into [ToolHub](https://codaiman.com/toolhub)\'s image section.',
     ],
     steps: [
       'Improve the image before you run OCR. This has more effect than any setting.',
       'Crop to the text area, straighten it, and make sure the contrast is strong.',
-      'Open the OCR tool in [ToolHub](https://codaiman.com/toolhub) and upload.',
+      'Then upload it to the OCR tool on [ToolHub](https://codaiman.com/toolhub).',
       'Set the language. Getting this wrong is a common cause of garbled output, particularly when mixing Hindi and English.',
       'Proofread the result. Always. OCR confuses similar characters and a number read wrong is worse than no number.',
     ],

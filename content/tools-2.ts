@@ -12,11 +12,11 @@ export const tools2: Tool[] = [
     excerpt: 'Everyone reaches for resolution first. Bitrate is what actually controls the file size.',
     what: [
       'Video compression confuses people because there are three knobs and only one of them usually needs turning. Resolution is how many pixels. Frame rate is how many images per second. **Bitrate** is how much data is spent per second of video, and it is the one that decides file size.',
-      'Drop a 1080p clip from a high bitrate to a moderate one and the file halves with barely any visible difference on a phone screen. Drop the resolution to 480p instead and it looks obviously worse while saving less than you expected. Start with bitrate. The compressor is in [ToolHub](https://codaiman.com/toolhub).',
+      'Drop a 1080p clip from a high bitrate to a moderate one and the file halves with barely any visible difference on a phone screen. Drop the resolution to 480p instead and it looks obviously worse while saving less than you expected. Start with bitrate. You will find the compressor in [ToolHub](https://codaiman.com/toolhub).',
     ],
     steps: [
       'Note your target size. WhatsApp caps around 16 MB for video, email attachments usually 25 MB.',
-      'Open the video compressor in [ToolHub](https://codaiman.com/toolhub).',
+      'Load it into the video compressor on [ToolHub](https://codaiman.com/toolhub).',
       'Reduce bitrate first, keeping the resolution. This is where the saving is.',
       'Only reduce resolution if bitrate alone did not get you there, and only to 720p rather than lower.',
       'Watch ten seconds of the output on the device it is meant for. A phone hides compression that a monitor exposes.',
@@ -53,10 +53,10 @@ export const tools2: Tool[] = [
     excerpt: 'MOV, AVI, MKV all play somewhere. MP4 with H.264 plays everywhere. That is the whole reason for this conversion.',
     what: [
       'A video file has two parts people conflate: the **container** (MP4, MOV, AVI, MKV) which is the wrapper, and the **codec** (H.264, H.265, VP9) which is how the picture is actually encoded. A file can be an MP4 and still fail to play if the codec inside is unusual.',
-      'MP4 with H.264 is the combination with the broadest support anywhere: every browser, every phone, every editor, every upload form. That is why converting to it solves so many playback problems. The converter is in the [ToolHub](https://codaiman.com/toolhub) video section.',
+      'MP4 with H.264 is the combination with the broadest support anywhere: every browser, every phone, every editor, every upload form takes it. That is why converting to it clears up so many playback problems. The converter sits in [ToolHub](https://codaiman.com/toolhub)\'s video section, ready whenever you hit that wall.',
     ],
     steps: [
-      'Open the video converter in [ToolHub](https://codaiman.com/toolhub) and upload your file.',
+      'Upload your file to the video converter on [ToolHub](https://codaiman.com/toolhub).',
       'Choose MP4 as the output container.',
       'Choose H.264 as the codec if you are offered the choice. H.265 is smaller but less compatible.',
       'Keep the original resolution unless you also need a smaller file.',
@@ -94,10 +94,10 @@ export const tools2: Tool[] = [
     excerpt: 'Cutting dead footage reduces file size with zero quality loss. Compression cannot say the same.',
     what: [
       'Trimming is the most underrated video operation because it is the only one that reduces file size without touching quality. Most clips have several seconds of nothing at each end: the fumble before recording starts properly, the reach for the stop button at the end. Cutting those is free.',
-      'The one technical wrinkle: fast trimming cuts at keyframes, which occur every few seconds, so your cut may land slightly off from where you asked. Frame-accurate trimming re-encodes that section to hit the exact point. Fast is fine for most purposes. [ToolHub](https://codaiman.com/toolhub) handles both.',
+      'One technical wrinkle worth knowing about: fast trimming cuts at keyframes, which occur every few seconds, so your cut may land slightly off from where you asked. Frame-accurate trimming re-encodes that section to hit the exact point instead. Fast is fine for most purposes, and [ToolHub](https://codaiman.com/toolhub) gives you both options.',
     ],
     steps: [
-      'Open the video trimmer in [ToolHub](https://codaiman.com/toolhub) and load your clip.',
+      'Load your clip into the video trimmer on [ToolHub](https://codaiman.com/toolhub).',
       'Set the start point after the dead footage, not at zero.',
       'Set the end point before the fumble at the end.',
       'Preview both edges. Cuts almost always need one adjustment.',
@@ -135,11 +135,11 @@ export const tools2: Tool[] = [
     excerpt: 'GIF is a terrible video format that is universally supported. Here is how to keep one small enough to be useful.',
     what: [
       'GIF is technically a bad way to store moving pictures. It has no modern compression and a 256-colour limit, so a five second clip can balloon past 20 MB. It survives because it plays absolutely everywhere and auto-loops without a player, which makes it the format of choice for documentation, bug reports and chat.',
-      'Three settings control the size: **duration**, **frame rate** and **dimensions**. Three seconds at 10 frames per second and 480 pixels wide gives a usable, small GIF. Ten seconds at 30 frames per second at full resolution gives something nobody can load. The converter is in [ToolHub](https://codaiman.com/toolhub).',
+      'Three settings control how big the file gets: **duration**, **frame rate** and **dimensions**. Three seconds at 10 frames per second and 480 pixels wide gives a usable, small GIF. Ten seconds at 30 frames per second at full resolution gives you something nobody can actually load. You will find the converter in [ToolHub](https://codaiman.com/toolhub).',
     ],
     steps: [
       'Trim the clip to the shortest useful segment first. Duration matters most.',
-      'Open the video to GIF converter in [ToolHub](https://codaiman.com/toolhub).',
+      'Then open the video to GIF converter on [ToolHub](https://codaiman.com/toolhub).',
       'Set the frame rate to 10 to 15. Beyond that you are adding size, not smoothness people notice.',
       'Reduce the width to 480 or 640 pixels unless fine detail matters.',
       'Export and check the size. Above 5 MB, cut the duration further.',
@@ -176,10 +176,10 @@ export const tools2: Tool[] = [
     excerpt: 'Sometimes you can copy the audio track out untouched. That is always better than re-encoding it.',
     what: [
       'Extracting audio comes up for lectures, interviews, recorded meetings and any case where you want to listen rather than watch, or where you need the audio for editing. It is also how you make a 200 MB video into a 5 MB file you can actually send.',
-      'The distinction worth knowing: if the video\'s audio is already in a format you want, the tool can **copy** the track out with zero quality loss. If you need a different format, it has to re-encode, which loses a little. Copying is always better when it is available. [ToolHub](https://codaiman.com/toolhub) handles both paths.',
+      'The distinction worth knowing: if the video\'s audio is already in a format you want, the tool can **copy** the track out with zero quality loss. If you need a different format, it has to re-encode, which loses a little along the way. Copying is always the better option when it is available, and [ToolHub](https://codaiman.com/toolhub)\'s extractor handles both paths.',
     ],
     steps: [
-      'Open the audio extractor in [ToolHub](https://codaiman.com/toolhub) and upload the video.',
+      'Upload the video to the audio extractor on [ToolHub](https://codaiman.com/toolhub).',
       'Choose your output. MP3 for listening and sharing, WAV if the audio is going into editing.',
       'If the tool offers a copy or passthrough option and the source format suits you, take it. No quality loss.',
       'For MP3, 128 kbps is fine for speech and 192 kbps or higher for music.',
@@ -217,10 +217,10 @@ export const tools2: Tool[] = [
     excerpt: 'The only decision is bitrate, and speech needs far less of it than people give it.',
     what: [
       'MP3 remains the audio format that plays on everything, including car stereos and old hardware that has never heard of anything newer. Converting to it is what you do when compatibility matters more than fidelity.',
-      'The setting that matters is bitrate. For **speech**, 128 kbps is transparent and even 96 kbps mono is perfectly clear, which halves the file again. For **music**, 192 kbps is a reasonable floor and 320 kbps is as good as MP3 gets. Using 320 kbps for a recorded meeting wastes three quarters of the file for nothing. The converter is in [ToolHub](https://codaiman.com/toolhub).',
+      'The setting that actually matters is bitrate. For **speech**, 128 kbps is transparent, and even 96 kbps mono is perfectly clear while halving the file again. For **music**, 192 kbps is a reasonable floor and 320 kbps is as good as MP3 gets. Use 320 kbps for a recorded meeting and you are wasting three quarters of the file for nothing. Find the converter over in [ToolHub](https://codaiman.com/toolhub).',
     ],
     steps: [
-      'Open the audio converter in [ToolHub](https://codaiman.com/toolhub) and upload your file.',
+      'Upload your file to the audio converter on [ToolHub](https://codaiman.com/toolhub).',
       'Choose MP3 as the output.',
       'Set bitrate by content: 128 kbps for speech, 192 kbps or higher for music.',
       'Switch to mono for speech recordings. It halves the size with no meaningful loss.',
@@ -258,10 +258,10 @@ export const tools2: Tool[] = [
     excerpt: 'Cut in silence, not mid-word, and add a short fade. That is the difference between a clean clip and an amateur one.',
     what: [
       'Trimming audio is straightforward with one craft detail that separates a clean result from an obviously amateur one. If you cut in the middle of a waveform rather than at a quiet point, you create an abrupt jump in the signal, and that jump is audible as a click or pop at the edge.',
-      'Two fixes: cut during silence or a natural pause, and add a very short fade in and out, a few milliseconds, which smooths the transition inaudibly. Do both and your clip sounds intentional. The trimmer is in the [ToolHub](https://codaiman.com/toolhub) audio section.',
+      'Two fixes handle it: cut during silence or a natural pause, and add a very short fade in and out, just a few milliseconds, which smooths the transition so it is inaudible. Do both and the clip sounds intentional rather than hacked apart. You will find the trimmer in [ToolHub](https://codaiman.com/toolhub)\'s audio section.',
     ],
     steps: [
-      'Open the audio trimmer in [ToolHub](https://codaiman.com/toolhub) and load the file.',
+      'Load the file into the audio trimmer on [ToolHub](https://codaiman.com/toolhub).',
       'Find your start and end points on the waveform. Look for the quiet gaps.',
       'Move each cut to the nearest pause rather than cutting mid-word.',
       'Add a short fade in and fade out if the tool offers it.',
@@ -299,12 +299,12 @@ export const tools2: Tool[] = [
     excerpt: 'Mismatched levels are what make a merged file sound stitched together. Formats matter less than volume.',
     what: [
       'Joining audio files is common for podcast segments, recorded lessons split across takes, and voice notes you want as one recording. The mechanical part is easy. Making it not sound obviously joined takes one extra consideration.',
-      'That consideration is **level matching**. If one file was recorded louder than the next, the listener hears a jump at the seam, and that jump is far more noticeable than any format difference. Normalise the files to a similar level before merging, or the join announces itself. The merge tool is in [ToolHub](https://codaiman.com/toolhub).',
+      'That consideration is **level matching**. If one file was recorded louder than the next, the listener hears a jump right at the seam, and that jump is far more noticeable than any format mismatch would be. Normalise the files to a similar level before merging, or the join gives itself away. Look for the merge tool in [ToolHub](https://codaiman.com/toolhub).',
     ],
     steps: [
       'Convert all files to the same format and sample rate first. Mixed inputs cause avoidable problems.',
       'Check the levels. If one recording is noticeably louder, normalise before merging.',
-      'Open the audio merge tool in [ToolHub](https://codaiman.com/toolhub) and add the files.',
+      'Then add the files to the audio merge tool on [ToolHub](https://codaiman.com/toolhub).',
       'Set the order deliberately. The tool follows your arrangement, not filename order.',
       'Listen to each join specifically. Those are the only places a merge can fail.',
     ],
@@ -340,10 +340,10 @@ export const tools2: Tool[] = [
     excerpt: 'Useful mainly because so many things have hard character limits. Here are the ones worth memorising.',
     what: [
       'A word counter sounds too simple to need a page, until you notice how many hard limits you write against: meta titles, meta descriptions, social posts, form fields, SMS. Going over does not produce a warning, it produces silent truncation, usually mid-word and usually somewhere visible.',
-      'The limits worth knowing: meta titles are truncated in search results around 60 characters, meta descriptions around 155 to 160, and an SMS segment is 160. These are the numbers behind most "why does my listing look cut off" questions. The counter is in the [ToolHub](https://codaiman.com/toolhub) text section.',
+      'The numbers worth memorising: meta titles get truncated in search results around 60 characters, meta descriptions around 155 to 160, and an SMS segment is 160. These are the answers behind most "why does my listing look cut off" questions. You will find the counter in [ToolHub](https://codaiman.com/toolhub)\'s text section.',
     ],
     steps: [
-      'Open the word counter in [ToolHub](https://codaiman.com/toolhub).',
+      'Pull up the word counter on [ToolHub](https://codaiman.com/toolhub).',
       'Paste your text. Counts update as you type.',
       'Check characters, not just words, if you are writing against a limit. Limits are almost always in characters.',
       'For meta text, aim slightly under the limit rather than exactly at it.',
@@ -381,10 +381,10 @@ export const tools2: Tool[] = [
     excerpt: 'Fixes caps-lock accidents, and converts between the naming conventions code actually uses.',
     what: [
       'The everyday use is rescuing text typed with caps lock on, or received from a system that shouts everything in capitals. Retyping a paragraph because of that is a waste of a few minutes that a case converter removes entirely.',
-      'The version developers care about is different: converting between naming conventions. **camelCase** for JavaScript variables, **snake_case** for Python and database columns, **kebab-case** for URLs and CSS classes, **PascalCase** for component names. Converting a list of field names between these by hand is exactly the sort of tedium that produces typos. Both live in [ToolHub](https://codaiman.com/toolhub).',
+      'Developers care about a different version of this: converting between naming conventions. **camelCase** for JavaScript variables, **snake_case** for Python and database columns, **kebab-case** for URLs and CSS classes, **PascalCase** for component names. Converting a list of field names between these by hand is exactly the sort of tedium that produces typos. Both live right there in [ToolHub](https://codaiman.com/toolhub).',
     ],
     steps: [
-      'Open the case converter in [ToolHub](https://codaiman.com/toolhub) and paste your text.',
+      'Paste your text into the case converter on [ToolHub](https://codaiman.com/toolhub).',
       'Pick the target case. Sentence case is usually what you want for rescued prose.',
       'For code identifiers, pick camelCase, snake_case, kebab-case or PascalCase as appropriate.',
       'Check proper nouns afterwards. Automatic sentence case will lowercase names it does not recognise.',
@@ -422,10 +422,10 @@ export const tools2: Tool[] = [
     excerpt: 'The traps are invisible: trailing spaces and case differences mean identical-looking lines are not duplicates.',
     what: [
       'Deduplicating a list of lines is one of those tasks that is trivial in principle and annoying in practice, because two lines that look identical often are not. A trailing space, a different capitalisation, or a stray tab makes them distinct as far as any tool is concerned.',
-      'So the useful options are **case sensitivity** and **trim whitespace**. With whitespace trimming on and case sensitivity off, "user@example.com " and "User@Example.com" correctly collapse into one entry. Without them, you keep both and wonder why. The tool is in the [ToolHub](https://codaiman.com/toolhub) text section.',
+      'So the two options that actually matter are **case sensitivity** and **trim whitespace**. With whitespace trimming on and case sensitivity off, "user@example.com " and "User@Example.com" correctly collapse into one entry. Leave them off and you keep both, then wonder why. Find it in [ToolHub](https://codaiman.com/toolhub)\'s text section.',
     ],
     steps: [
-      'Open the duplicate line remover in [ToolHub](https://codaiman.com/toolhub) and paste your list.',
+      'Paste your list into the duplicate line remover on [ToolHub](https://codaiman.com/toolhub).',
       'Turn on whitespace trimming. This alone catches most missed duplicates.',
       'Turn off case sensitivity for emails, URLs and names, where case does not signify.',
       'Keep case sensitivity on for anything where case matters, like codes, hashes or identifiers.',
@@ -463,10 +463,10 @@ export const tools2: Tool[] = [
     excerpt: 'Four mistakes cause almost every JSON parse error. Trailing commas top the list.',
     what: [
       'A JSON formatter does two jobs. It pretty-prints a minified blob so a human can read it, and it validates the syntax so you find out exactly where the structure is broken instead of staring at an API error.',
-      'Almost every JSON parse failure is one of four things: a **trailing comma** after the last item, **single quotes** instead of double, an **unquoted key**, or an unescaped character inside a string. JSON is stricter than JavaScript object literals, which is why code that looks fine to a developer fails to parse. The formatter is in the [ToolHub](https://codaiman.com/toolhub) developer section.',
+      'Almost every JSON parse failure boils down to one of four things: a **trailing comma** after the last item, **single quotes** instead of double, an **unquoted key**, or an unescaped character inside a string. JSON is stricter than JavaScript object literals, which is why code that looks perfectly fine to a developer refuses to parse. You will find the formatter in [ToolHub](https://codaiman.com/toolhub)\'s developer section.',
     ],
     steps: [
-      'Open the JSON formatter in [ToolHub](https://codaiman.com/toolhub) and paste your JSON.',
+      'Paste your JSON into the formatter on [ToolHub](https://codaiman.com/toolhub).',
       'Format it. If it is invalid, you get an error position instead.',
       'Go to the reported position, then look at the character just before it. The real problem is usually one character earlier than the error points to.',
       'Check the four usual suspects: trailing comma, single quotes, unquoted key, unescaped character.',
@@ -504,10 +504,10 @@ export const tools2: Tool[] = [
     excerpt: 'Base64 is encoding, not encryption. Anyone can decode it instantly, which matters more than most people realise.',
     what: [
       'Base64 converts binary data into plain text using 64 safe characters, so binary can travel through channels that only handle text: email attachments, JSON fields, data URIs in CSS, JWT payloads. That is its entire purpose.',
-      'The critical thing to be clear about: **Base64 is not encryption and provides no security whatsoever.** Anyone can decode it in one second with no key. If you Base64 a password thinking it is hidden, it is not hidden. The other cost worth knowing is size: Base64 output is about 33 percent larger than the input, which is why embedding large images as data URIs makes pages heavier, not lighter. The tool is in [ToolHub](https://codaiman.com/toolhub).',
+      'One thing needs to be crystal clear here: **Base64 is not encryption and provides no security whatsoever.** Anyone can decode it in one second with no key at all. If you Base64 a password thinking that hides it, it does not, not even a little. The other cost worth knowing is size: Base64 output runs about 33 percent larger than the input, which is why embedding large images as data URIs makes pages heavier instead of lighter. Find it in [ToolHub](https://codaiman.com/toolhub) whenever you need it.',
     ],
     steps: [
-      'Open the Base64 tool in [ToolHub](https://codaiman.com/toolhub).',
+      'Head over to the Base64 tool on [ToolHub](https://codaiman.com/toolhub).',
       'Pick encode or decode.',
       'Paste your input. For decoding, include the whole string; truncated Base64 fails.',
       'If decoding produces garbage, check whether it is URL-safe Base64, which swaps two characters.',
@@ -545,10 +545,10 @@ export const tools2: Tool[] = [
     excerpt: 'Spaces, ampersands and question marks break URLs. Encoding fixes it, and double-encoding breaks it differently.',
     what: [
       'URLs can only safely contain a limited set of characters. Anything else, a space, an ampersand, a question mark, a hash, or any non-Latin character, has to be percent-encoded or it changes the meaning of the URL. An unescaped ampersand inside a parameter value silently starts a new parameter, which is why the value arrives truncated.',
-      'The trap on the other side is **double encoding**. If you encode a URL that is already encoded, `%20` becomes `%2520` and the link breaks in a way that is confusing to diagnose because it looks encoded. Decode first, check, then encode once. The tool is in [ToolHub](https://codaiman.com/toolhub).',
+      'The trap on the other side is **double encoding**. Encode a URL that is already encoded and `%20` becomes `%2520`, breaking the link in a way that is genuinely confusing to diagnose, since it still looks encoded at a glance. Decode first, check, then encode once. The tool lives in [ToolHub](https://codaiman.com/toolhub).',
     ],
     steps: [
-      'Open the URL encoder in [ToolHub](https://codaiman.com/toolhub).',
+      'Pull up the URL encoder on [ToolHub](https://codaiman.com/toolhub).',
       'If you are debugging an existing URL, decode it first to see what it actually contains.',
       'Encode parameter **values** individually, not the whole URL. Encoding the whole thing escapes the slashes and colons too.',
       'Watch for `%25` in the output, which signals the input was already encoded.',
@@ -586,10 +586,10 @@ export const tools2: Tool[] = [
     excerpt: 'MD5 is fine for checking a download. It is completely unfit for passwords, and so is SHA-256 on its own.',
     what: [
       'A hash turns any input into a fixed-length fingerprint. The same input always gives the same hash, and you cannot work backwards from the hash to the input. That makes hashes useful for verifying that a file downloaded intact, or that two things are identical without comparing them byte by byte.',
-      'Where people go wrong is passwords. **MD5 and SHA-1 are cryptographically broken** and should not be used for anything security-related. But even SHA-256 is wrong for passwords, because it is fast, and fast is exactly what an attacker wants when guessing billions of candidates. Passwords need a deliberately slow algorithm like bcrypt or Argon2. The hash generator is in [ToolHub](https://codaiman.com/toolhub).',
+      'Where people go wrong is passwords. **MD5 and SHA-1 are cryptographically broken** and should not be used for anything security-related, full stop. But even SHA-256 is the wrong choice for passwords, because it is fast, and fast is exactly what an attacker wants when guessing billions of candidates. Passwords need a deliberately slow algorithm like bcrypt or Argon2 instead. You will find the hash generator in [ToolHub](https://codaiman.com/toolhub).',
     ],
     steps: [
-      'Open the hash generator in [ToolHub](https://codaiman.com/toolhub).',
+      'Head to the hash generator on [ToolHub](https://codaiman.com/toolhub).',
       'Pick the algorithm. SHA-256 for anything current; MD5 only for non-security checksums.',
       'Paste your input or upload the file.',
       'For verifying a download, compare against the published hash character by character, or paste both and diff them.',
@@ -627,11 +627,11 @@ export const tools2: Tool[] = [
     excerpt: 'Most unscannable QR codes are either printed too small or encode a URL that is far too long.',
     what: [
       'QR codes are straightforward to generate and easy to make unusable. The two failure modes are almost always the same: the code is printed too small, or the data encoded is too long, which forces a dense pattern that phone cameras struggle to resolve.',
-      'Practical numbers: a printed QR code should be at least 2 by 2 centimetres for close scanning, and considerably larger for anything scanned from a distance. Shorten long URLs before encoding rather than after printing. Also set **error correction** to at least medium, which lets the code still scan when part of it is scuffed, covered or poorly printed. The generator is in [ToolHub](https://codaiman.com/toolhub).',
+      'Some practical numbers: a printed QR code should be at least 2 by 2 centimetres for close scanning, and considerably bigger for anything scanned from a distance. Shorten long URLs before encoding them rather than after printing a thousand copies. Also set **error correction** to at least medium, which lets the code still scan when part of it is scuffed, covered or poorly printed. The generator is sitting in [ToolHub](https://codaiman.com/toolhub) whenever you need it.',
     ],
     steps: [
       'Shorten your URL first if it is long. Fewer characters means a less dense, more reliable code.',
-      'Open the QR generator in [ToolHub](https://codaiman.com/toolhub) and enter your data.',
+      'Enter your data into the QR generator on [ToolHub](https://codaiman.com/toolhub).',
       'Set error correction to medium or high, especially for anything printed.',
       'Export as PNG or SVG. Use SVG for print, since it scales without blurring.',
       'Test by scanning the final printed or on-screen version with more than one phone.',

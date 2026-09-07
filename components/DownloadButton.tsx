@@ -1,6 +1,6 @@
 import { Download } from 'lucide-react';
 
-const DL_URL = "https://share.in7game.org/share/agent/SA6YDBPC?data=eyJtIjoxLCJsYW5nIjoiaGkiLCJpZCI6MX0=";
+const DL_URL = "https://share.in7game.org/share/agent/SD67PUG4?data=eyJtIjoxLCJsYW5nIjoiZW4iLCJpZCI6MX0=";
 
 interface Props {
   text?: string;
